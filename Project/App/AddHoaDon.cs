@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class frmLogin : Form
+    public partial class AddHoaDon : Form
     {
-        public frmLogin()
+        public AddHoaDon()
         {
             InitializeComponent();
         }
