@@ -72,28 +72,28 @@ go
 alter table dbo.NHANVIEN ADD CONSTRAINT FK_Phong foreign key(MaPhong) references dbo.PHONGBAN(MaPhong)
 go
 
-drop proc insertNhanVien
+drop proc sp_InsertNhanVien
 go
-drop proc deleteNhanVien
+drop proc sp_DeleteNhanVien
 go
-drop proc updateNhanVien
+drop proc sp_UpdateNhanVien
 go
-drop proc selectNhanVien
+drop proc sp_SelectNhanVien
 go
 
-create proc insertNhanvien
+create proc sp_InsertNhanVien
 (@maNV nvarchar(10), @hoNV nvarchar(50), @tenNV nvarchar(30), @ngaySinh date, @diaChi nvarchar(50), @canCuocCD nvarchar(12), @sdt nvarchar(10), @phai nvarchar(5),@luong float,@maPhong nvarchar(10))
 as
 	insert into NHANVIEN(MaNV,HoNV,TenNV,NgSinh,DiaChi,CanCuoc,SDT,Phai,Luong,MaPhong)
 	values (@maNV,@hoNV,@tenNV,@ngaySinh,@diaChi,@canCuocCD,@sdt,@phai,@luong,@maPhong)
 go
 
-create proc deleteNhanVien @manv nvarchar(10)
+create proc sp_DeleteNhanVien @manv nvarchar(10)
 as
 	delete NHANVIEN where MaNV = @manv
 go
 
-create proc updateNhanVien 
+create proc sp_UpdateNhanVien 
 (@maNV nvarchar(10), @hoNV nvarchar(50), @tenNV nvarchar(30), @ngaySinh date, @diaChi nvarchar(50), @canCuocCD nvarchar(12), @sdt nvarchar(10), @phai nvarchar(5),@luong float,@maPhong nvarchar(10))
 as
 	update NHANVIEN 
@@ -111,34 +111,34 @@ as
 	where MaNV = @maNV;
 go
 
-create proc selectNhanVien
+create proc sp_SelectNhanVien
 as
 	select * from NHANVIEN
 go
 
-drop proc insertKhachHang
+drop proc sp_InsertKhachHang
 go
-drop proc deleteKhachHang 
+drop proc sp_DeleteKhachHang 
 go
-drop proc updateKhachHang
+drop proc sp_UpdateKhachHang
 go
-drop proc selectKhachHang
+drop proc sp_SelectKhacHang
 go
 
-create proc insertKhachHang
+create proc sp_InsertKhachHang
 (@CanCuoc nvarchar(12),@ho nvarchar(50),@ten nvarchar(30),@diaChi nvarchar(50),@sdt nvarchar(10))
 as
 	insert into KHACHHANG(CanCuocCD,Ho,Ten,DiaChi,SDT)
 	values(@CanCuoc,@ho,@ten,@diaChi,@sdt)
 go
 
-create proc deleteKhachHang
+create proc sp_DeleteKhachHang
 @CanCuoc nvarchar(12)
 as
 	delete KHACHHANG where CanCuocCD = @CanCuoc
 go
 
-create proc updateKhachHang
+create proc sp_UpdateKhachHang
 (@CanCuoc nvarchar(12),@ho nvarchar(50),@ten nvarchar(30),@diaChi nvarchar(50),@sdt nvarchar(10))
 as
 	update KHACHHANG
@@ -150,35 +150,35 @@ as
 	SDT = @sdt
 	where CanCuocCD = @CanCuoc
 go
-create proc selectKhacHang
+create proc sp_SelectKhacHang
 as
 	select * from KHACHHANG
 go
 
 
-drop proc insertPhongBan
+drop proc sp_InsertPhongBan
 go
-drop proc deletePhongBan
+drop proc sp_DeletePhongBan
 go
-drop proc updatePhongBan
+drop proc sp_UpdatePhongBan
 go
-drop proc selectPhongBan
+drop proc sp_SelectPhongBan
 go
 
-create proc insertPhongBan
+create proc sp_InsertPhongBan
 (@maPhong nvarchar(10) , @maQL nvarchar(10),@tenPhong nvarchar(30))
 as
 	insert into PHONGBAN(MaPhong,MaQL,TenPhong)
 	values(@maPhong,@maQL,@tenPhong)
 go
 
-create proc deletePhongBan
+create proc sp_DeletePhongBan
 @maPhongBan nvarchar(10)
 as
 	delete PHONGBAN where MaPhong = @maPhongBan
 go
 
-create proc updatePhongBan
+create proc sp_UpdatePhongBan
 (@maPhong nvarchar(10) , @maQL nvarchar(10),@tenPhong nvarchar(30))
 as
 	update PHONGBAN
@@ -188,7 +188,7 @@ as
 	TenPhong = @tenPhong
 	where MaPhong = @maPhong
 go
-create proc selectPhongBan
+create proc sp_SelectPhongBan
 as
 	select * from PHONGBAN
 go
@@ -202,20 +202,20 @@ go
 drop proc selectDonHang
 go
 
-create proc insertDonHang
+create proc sp_InsertDonHang
 (@maDonHang nvarchar(10),@diachiGui nvarchar(100),@diachiNhan nvarchar(100),@cccdNhan nvarchar(12),@cccdGui nvarchar(12),@mieuta nvarchar(200),@khoiLuong float, @KichThuoc float, @cuoc int, @maNV nvarchar(10))
 as
 	insert into DONHANG(MaDonHang,DiachiGui,DiachiNhan,CCCDGui,CCCDNhan,MieuTa,KhoiLuong,KichThuoc,Cuoc,MaNV)
 	values(@maDonHang,@diachiGui,@diachiNhan,@cccdGui,@cccdNhan,@mieuta,@khoiLuong,@KichThuoc,@cuoc,@maNV)
 go
 
-create proc deleteDonHang
+create proc sp_DeleteDonHang
 @maDonHang NVARCHAR(10)
 AS
 	DELETE dbo.DONHANG WHERE MaDonHang = @maDonHang
 GO
 
-CREATE PROC updateDonHang
+CREATE PROC sp_UpdateDonHang
 (@maDonHang nvarchar(10),@diachiGui nvarchar(100),@diachiNhan nvarchar(100),@cccdNhan nvarchar(12),@cccdGui nvarchar(12),@mieuta nvarchar(200),@khoiLuong float, @KichThuoc float, @cuoc int, @maNV nvarchar(10))
 AS	
 	UPDATE dbo.DONHANG
@@ -232,7 +232,14 @@ AS
 	MaNV = @maNV
 GO
 
-create proc selectDonHang
+create proc sp_SelectDonHang
 as
 select * from DONHANG;
 go
+
+CREATE PROC sp_countDonHang
+as
+SELECT COUNT(*)
+FROM dbo.DONHANG
+WHERE MaDonHang
+GO
