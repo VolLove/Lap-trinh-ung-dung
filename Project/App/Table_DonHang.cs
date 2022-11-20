@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class frmDonHang : Form
+    public partial class frmTableDonHang : Form
     {
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
 
-        public frmDonHang()
+        public frmTableDonHang()
         {
             InitializeComponent();
             loadData();
@@ -59,6 +59,12 @@ namespace App
         {
             frmUpdateDonHang updateDonHang = new frmUpdateDonHang();
             updateDonHang.Show();
+        }
+
+
+        private void dvgDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

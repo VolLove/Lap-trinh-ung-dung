@@ -1,4 +1,4 @@
-﻿
+
 drop database PROJECT
 go
 CREATE DATABASE PROJECT
@@ -31,6 +31,7 @@ CREATE TABLE DONHANG(
 go
 CREATE TABLE KHACHHANG(
 	CanCuocCD nvarchar(12) not null primary KEY,
+	Phai nvarchar(5),
 	HovaTen nvarchar(50) not null,
 	DiaChi nvarchar(50) not null,
 	SDT nvarchar(10) not null

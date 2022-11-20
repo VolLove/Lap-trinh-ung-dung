@@ -1,6 +1,6 @@
 ﻿namespace App
 {
-    partial class frmDonHang
+    partial class frmTableKhachHang
     {
         /// <summary>
         /// Required designer variable.
@@ -28,52 +28,50 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dvgDonHang = new System.Windows.Forms.DataGridView();
-            this.btnThem = new System.Windows.Forms.Button();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
+            this.btnXoa = new System.Windows.Forms.Button();
+            this.btnThem = new System.Windows.Forms.Button();
+            this.dvgDonHang = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dvgDonHang
-            // 
-            this.dvgDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgDonHang.Location = new System.Drawing.Point(12, 12);
-            this.dvgDonHang.Name = "dvgDonHang";
-            this.dvgDonHang.Size = new System.Drawing.Size(776, 328);
-            this.dvgDonHang.TabIndex = 0;
-            // 
-            // btnThem
-            // 
-            this.btnThem.Location = new System.Drawing.Point(56, 362);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(75, 23);
-            this.btnThem.TabIndex = 1;
-            this.btnThem.Text = "New";
-            this.btnThem.UseVisualStyleBackColor = true;
-            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(189, 362);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(75, 23);
-            this.btnXoa.TabIndex = 2;
-            this.btnXoa.Text = "Xoá";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
             this.btnSua.Location = new System.Drawing.Point(326, 362);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 3;
+            this.btnSua.TabIndex = 7;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
-            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // frmDonHang
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(189, 362);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(75, 23);
+            this.btnXoa.TabIndex = 6;
+            this.btnXoa.Text = "Xoá";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            // 
+            // btnThem
+            // 
+            this.btnThem.Location = new System.Drawing.Point(56, 362);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(75, 23);
+            this.btnThem.TabIndex = 5;
+            this.btnThem.Text = "New";
+            this.btnThem.UseVisualStyleBackColor = true;
+            // 
+            // dvgDonHang
+            // 
+            this.dvgDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgDonHang.Location = new System.Drawing.Point(12, 12);
+            this.dvgDonHang.Name = "dvgDonHang";
+            this.dvgDonHang.ReadOnly = true;
+            this.dvgDonHang.Size = new System.Drawing.Size(776, 328);
+            this.dvgDonHang.TabIndex = 4;
+            // 
+            // frmTableKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -82,8 +80,8 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dvgDonHang);
-            this.Name = "frmDonHang";
-            this.Text = "Danh sách đơn hàng";
+            this.Name = "frmTableKhachHang";
+            this.Text = "KhachHang";
             ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).EndInit();
             this.ResumeLayout(false);
 
@@ -91,9 +89,9 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dvgDonHang;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.DataGridView dvgDonHang;
     }
 }

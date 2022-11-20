@@ -56,11 +56,17 @@
     <Compile Include="DeleteDonHang.Designer.cs">
       <DependentUpon>DeleteDonHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="DonHang.cs">
+    <Compile Include="Table_KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DonHang.Designer.cs">
-      <DependentUpon>DonHang.cs</DependentUpon>
+    <Compile Include="Table_KhachHang.Designer.cs">
+      <DependentUpon>Table_KhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Table_DonHang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Table_DonHang.Designer.cs">
+      <DependentUpon>Table_DonHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -80,11 +86,11 @@
     <Compile Include="NewDonHang.Designer.cs">
       <DependentUpon>NewDonHang.cs</DependentUpon>
     </Compile>
-    <Compile Include="NhanVien.cs">
+    <Compile Include="Table_NhanVien.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NhanVien.Designer.cs">
-      <DependentUpon>NhanVien.cs</DependentUpon>
+    <Compile Include="Table_NhanVien.Designer.cs">
+      <DependentUpon>Table_NhanVien.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,8 +103,8 @@
     <EmbeddedResource Include="DeleteDonHang.resx">
       <DependentUpon>DeleteDonHang.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DonHang.resx">
-      <DependentUpon>DonHang.cs</DependentUpon>
+    <EmbeddedResource Include="Table_DonHang.resx">
+      <DependentUpon>Table_DonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>
@@ -118,6 +124,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Table_KhachHang.resx">
+      <DependentUpon>Table_KhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Table_NhanVien.resx">
+      <DependentUpon>Table_NhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateDonHang.resx">
       <DependentUpon>UpdateDonHang.cs</DependentUpon>
     </EmbeddedResource>

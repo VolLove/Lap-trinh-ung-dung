@@ -21,7 +21,7 @@ namespace App
 
         private void danhSáchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDonHang frmDanh = new frmDonHang();
+            frmTableDonHang frmDanh = new frmTableDonHang();
             frmDanh.Show();
 
         }
