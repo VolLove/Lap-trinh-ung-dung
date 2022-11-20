@@ -46,6 +46,5 @@ namespace App
             }
             finally { connection.Close(); }
         }
-
     }
 }
