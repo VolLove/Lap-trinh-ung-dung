@@ -16,7 +16,6 @@ drop table NHANVIEN
 go
 
 
-
 CREATE TABLE DONHANG(
 	MaDonHang nvarchar(10) not null PRIMARY KEY,
 	DiachiGui nvarchar(100) not null,
@@ -32,12 +31,12 @@ CREATE TABLE DONHANG(
 go
 CREATE TABLE KHACHHANG(
 	CanCuocCD nvarchar(12) not null primary KEY,
-	Ho nvarchar(50) not null,
-	Ten nvarchar(30) not null,
+	HovaTen nvarchar(50) not null,
 	DiaChi nvarchar(50) not null,
 	SDT nvarchar(10) not null
 )
 go
+
 
 CREATE TABLE NHANVIEN(
 	MaNV nvarchar(10) not null primary key,
@@ -126,10 +125,10 @@ drop proc sp_SelectKhacHang
 go
 
 create proc sp_InsertKhachHang
-(@CanCuoc nvarchar(12),@ho nvarchar(50),@ten nvarchar(30),@diaChi nvarchar(50),@sdt nvarchar(10))
+(@CanCuoc nvarchar(12),@hovaten nvarchar(50),@diaChi nvarchar(50),@sdt nvarchar(10))
 as
-	insert into KHACHHANG(CanCuocCD,Ho,Ten,DiaChi,SDT)
-	values(@CanCuoc,@ho,@ten,@diaChi,@sdt)
+	insert into KHACHHANG(CanCuocCD,HovaTen,DiaChi,SDT)
+	values(@CanCuoc,@hovaten,@diaChi,@sdt)
 go
 
 create proc sp_DeleteKhachHang
@@ -139,13 +138,12 @@ as
 go
 
 create proc sp_UpdateKhachHang
-(@CanCuoc nvarchar(12),@ho nvarchar(50),@ten nvarchar(30),@diaChi nvarchar(50),@sdt nvarchar(10))
+(@CanCuoc nvarchar(12),@hovaten nvarchar(50),@diaChi nvarchar(50),@sdt nvarchar(10))
 as
 	update KHACHHANG
 	set
 	CanCuocCD = @CanCuoc,
-	Ho = @ho,
-	Ten = @ten,
+	HovaTen = @hovaten,
 	DiaChi = @diaChi,
 	SDT = @sdt
 	where CanCuocCD = @CanCuoc
@@ -236,10 +234,3 @@ create proc sp_SelectDonHang
 as
 select * from DONHANG;
 go
-
-CREATE PROC sp_countDonHang
-as
-SELECT COUNT(*)
-FROM dbo.DONHANG
-WHERE MaDonHang
-GO
