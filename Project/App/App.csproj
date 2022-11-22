@@ -50,12 +50,6 @@
     <Compile Include="AddHoaDon.Designer.cs">
       <DependentUpon>AddHoaDon.cs</DependentUpon>
     </Compile>
-    <Compile Include="DeleteDonHang.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="DeleteDonHang.Designer.cs">
-      <DependentUpon>DeleteDonHang.cs</DependentUpon>
-    </Compile>
     <Compile Include="Table_KhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,11 +74,11 @@
     <Compile Include="Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="NewDonHang.cs">
+    <Compile Include="ChanceDonHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NewDonHang.Designer.cs">
-      <DependentUpon>NewDonHang.cs</DependentUpon>
+    <Compile Include="ChanceDonHang.Designer.cs">
+      <DependentUpon>ChanceDonHang.cs</DependentUpon>
     </Compile>
     <Compile Include="Table_NhanSu.cs">
       <SubType>Form</SubType>
@@ -100,9 +94,6 @@
     <Compile Include="UpdateDonHang.Designer.cs">
       <DependentUpon>UpdateDonHang.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="DeleteDonHang.resx">
-      <DependentUpon>DeleteDonHang.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Table_DonHang.resx">
       <DependentUpon>Table_DonHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -112,8 +103,8 @@
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="NewDonHang.resx">
-      <DependentUpon>NewDonHang.cs</DependentUpon>
+    <EmbeddedResource Include="ChanceDonHang.resx">
+      <DependentUpon>ChanceDonHang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

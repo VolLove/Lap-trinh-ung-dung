@@ -45,20 +45,18 @@ namespace App
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            frmNewDonHang newDonHang= new frmNewDonHang();
-            newDonHang.Show();
+            ChanceDonHang chanceDonHang = new ChanceDonHang();
+            chanceDonHang.Show();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            frmDeleteDonHang deleteDonHang = new frmDeleteDonHang();
-            deleteDonHang.Show();
         }
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            frmUpdateDonHang updateDonHang = new frmUpdateDonHang();
-            updateDonHang.Show();
+            ChanceDonHang chanceDonHang = new ChanceDonHang();
+            chanceDonHang.Show();
         }
 
 
