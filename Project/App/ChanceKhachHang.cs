@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class frmUpdateDonHang : Form
+    public partial class frmChanceKhachHang : Form
     {
-        public frmUpdateDonHang()
+        public frmChanceKhachHang()
         {
             InitializeComponent();
         }

@@ -45,8 +45,8 @@ namespace App
 
         private void btnThem_Click(object sender, EventArgs e)
         {
-            ChanceDonHang chanceDonHang = new ChanceDonHang();
-            chanceDonHang.Show();
+            frmChanceDonHang chanceDonHang = new frmChanceDonHang();
+            chanceDonHang.ShowDialog();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -55,14 +55,19 @@ namespace App
 
         private void btnSua_Click(object sender, EventArgs e)
         {
-            ChanceDonHang chanceDonHang = new ChanceDonHang();
-            chanceDonHang.Show();
+            frmChanceDonHang chanceDonHang = new frmChanceDonHang();
+            chanceDonHang.Text = "Chỉnh sửa đơn hàng";
+            chanceDonHang.ShowDialog();
         }
 
 
         private void dvgDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+            frmChanceDonHang chanceDonHang = new frmChanceDonHang();
+            chanceDonHang.Text = "Đơn hàng mới";
 
+            chanceDonHang.ShowDialog();
         }
+
     }
 }

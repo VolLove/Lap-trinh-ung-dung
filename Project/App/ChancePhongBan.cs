@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class AddHoaDon : Form
+    public partial class frmChancePhongBan : Form
     {
-        public AddHoaDon()
+        public frmChancePhongBan()
         {
             InitializeComponent();
         }

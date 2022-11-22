@@ -11,6 +11,21 @@
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -44,11 +59,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddHoaDon.cs">
+    <Compile Include="ChanceKhachHang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddHoaDon.Designer.cs">
-      <DependentUpon>AddHoaDon.cs</DependentUpon>
+    <Compile Include="ChanceKhachHang.Designer.cs">
+      <DependentUpon>ChanceKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChanceNhanSu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChanceNhanSu.Designer.cs">
+      <DependentUpon>ChanceNhanSu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ChancePhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChancePhongBan.Designer.cs">
+      <DependentUpon>ChancePhongBan.cs</DependentUpon>
     </Compile>
     <Compile Include="Table_KhachHang.cs">
       <SubType>Form</SubType>
@@ -88,12 +115,21 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UpdateDonHang.cs">
+    <Compile Include="Table_PhongBan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UpdateDonHang.Designer.cs">
-      <DependentUpon>UpdateDonHang.cs</DependentUpon>
+    <Compile Include="Table_PhongBan.Designer.cs">
+      <DependentUpon>Table_PhongBan.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ChanceKhachHang.resx">
+      <DependentUpon>ChanceKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChanceNhanSu.resx">
+      <DependentUpon>ChanceNhanSu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ChancePhongBan.resx">
+      <DependentUpon>ChancePhongBan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Table_DonHang.resx">
       <DependentUpon>Table_DonHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -121,8 +157,8 @@
     <EmbeddedResource Include="Table_NhanSu.resx">
       <DependentUpon>Table_NhanSu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UpdateDonHang.resx">
-      <DependentUpon>UpdateDonHang.cs</DependentUpon>
+    <EmbeddedResource Include="Table_PhongBan.resx">
+      <DependentUpon>Table_PhongBan.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -133,6 +169,13 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

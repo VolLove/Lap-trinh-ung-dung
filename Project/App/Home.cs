@@ -19,36 +19,55 @@ namespace App
             InitializeComponent();
         }
 
-
-        private void mnuDonHang_Click(object sender, EventArgs e)
-        {
-            frmTableDonHang tableDonHang = new frmTableDonHang();
-            tableDonHang.ShowDialog();
-        }
-
         private void mnuLogOut_Click(object sender, EventArgs e)
         {
             this.Hide();
             frmLogin login = new frmLogin();
             login.ShowDialog();
             this.Close();
+
         }
-
-
         private void mnuKhachHang_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmTableKhachHang tableKhachHang = new frmTableKhachHang();
             tableKhachHang.ShowDialog();
-            this.Close();
+
         }
 
         private void mnuNhanVien_Click(object sender, EventArgs e)
         {
-            this.Hide();
             frmTableNhanSu tableNhanSu = new frmTableNhanSu();
             tableNhanSu.ShowDialog();
-            this.Close();
+        }
+
+        private void frmHome_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult r;
+            r = MessageBox.Show("Do you want to close?", "Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (r == DialogResult.No)
+            {
+                e.Cancel = true;
+            }
+        }
+
+        private void mnuDanhsachDonHang_Click(object sender, EventArgs e)
+        {
+            frmTableDonHang tableDonHang = new frmTableDonHang();
+            tableDonHang.ShowDialog();
+
+        }
+
+        private void mnuNewDonHang_Click(object sender, EventArgs e)
+        {
+            frmChanceDonHang chanceDonHang = new frmChanceDonHang();
+            chanceDonHang.Text = "Đơn hàng mới";
+            chanceDonHang.ShowDialog();
+        }
+
+        private void mnuPhongBan_Click(object sender, EventArgs e)
+        {
+            frmTable_PhongBan chancePhongBan = new frmTable_PhongBan();
+            chancePhongBan.ShowDialog();
         }
     }
 }

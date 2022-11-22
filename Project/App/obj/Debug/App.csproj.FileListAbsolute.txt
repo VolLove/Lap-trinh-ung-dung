@@ -26,7 +26,6 @@ F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.cspro
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmHome.resources
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmLogin.resources
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.Properties.Resources.resources
-F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmUpdateDonHang.resources
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.csproj.GenerateResource.cache
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.csproj.CoreCompileInputs.cache
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.exe
@@ -34,4 +33,8 @@ F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.pdb
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmTableDonHang.resources
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmTableKhachHang.resources
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmTableNhanSu.resources
-F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.ChanceDonHang.resources
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmChanceDonHang.resources
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmChanceKhachHang.resources
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmChanceNhanSu.resources
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmChancePhongBan.resources
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmTable_PhongBan.resources

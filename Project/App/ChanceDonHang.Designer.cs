@@ -1,6 +1,6 @@
 ﻿namespace App
 {
-    partial class ChanceDonHang
+    partial class frmChanceDonHang
     {
         /// <summary>
         /// Required designer variable.
@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             this.lblMaDonHang = new System.Windows.Forms.Label();
             this.grpDonHang = new System.Windows.Forms.GroupBox();
+            this.txtMaDonHang = new System.Windows.Forms.TextBox();
             this.btnGetMNV = new System.Windows.Forms.Button();
             this.txtMieuTa = new System.Windows.Forms.TextBox();
             this.lblMieuTa = new System.Windows.Forms.Label();
@@ -44,10 +45,10 @@
             this.lblMNV = new System.Windows.Forms.Label();
             this.grpForm = new System.Windows.Forms.GroupBox();
             this.btnGetFrom = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lblSDTFrom = new System.Windows.Forms.Label();
             this.cbxGioiTinhFrom = new System.Windows.Forms.ComboBox();
             this.txtDiaChiFrom = new System.Windows.Forms.TextBox();
-            this.lblDiaChi = new System.Windows.Forms.Label();
+            this.lblDiaChiFrom = new System.Windows.Forms.Label();
             this.txtSDTFrom = new System.Windows.Forms.TextBox();
             this.lblCanCuoc = new System.Windows.Forms.Label();
             this.txtCCCDFrom = new System.Windows.Forms.TextBox();
@@ -56,16 +57,16 @@
             this.lblNameFrom = new System.Windows.Forms.Label();
             this.grmTo = new System.Windows.Forms.GroupBox();
             this.btnGetTo = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
+            this.lblSDTTo = new System.Windows.Forms.Label();
             this.cbxGioiTinhTo = new System.Windows.Forms.ComboBox();
             this.txtDiaChiTo = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
+            this.lblDiaChiTo = new System.Windows.Forms.Label();
             this.txtSDTTo = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblCCCDTo = new System.Windows.Forms.Label();
             this.txtCCCDTo = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lblGioiTinhTo = new System.Windows.Forms.Label();
             this.txtNameTo = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblNameTo = new System.Windows.Forms.Label();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
@@ -106,7 +107,7 @@
             // lblMaDonHang
             // 
             this.lblMaDonHang.AutoSize = true;
-            this.lblMaDonHang.Location = new System.Drawing.Point(16, 26);
+            this.lblMaDonHang.Location = new System.Drawing.Point(19, 26);
             this.lblMaDonHang.Name = "lblMaDonHang";
             this.lblMaDonHang.Size = new System.Drawing.Size(71, 13);
             this.lblMaDonHang.TabIndex = 1;
@@ -114,6 +115,7 @@
             // 
             // grpDonHang
             // 
+            this.grpDonHang.Controls.Add(this.txtMaDonHang);
             this.grpDonHang.Controls.Add(this.btnGetMNV);
             this.grpDonHang.Controls.Add(this.txtMieuTa);
             this.grpDonHang.Controls.Add(this.lblMieuTa);
@@ -133,9 +135,16 @@
             this.grpDonHang.TabStop = false;
             this.grpDonHang.Text = "Thông tin bưu kiện";
             // 
+            // txtMaDonHang
+            // 
+            this.txtMaDonHang.Location = new System.Drawing.Point(132, 23);
+            this.txtMaDonHang.Name = "txtMaDonHang";
+            this.txtMaDonHang.Size = new System.Drawing.Size(92, 20);
+            this.txtMaDonHang.TabIndex = 1;
+            // 
             // btnGetMNV
             // 
-            this.btnGetMNV.Location = new System.Drawing.Point(230, 49);
+            this.btnGetMNV.Location = new System.Drawing.Point(230, 57);
             this.btnGetMNV.Name = "btnGetMNV";
             this.btnGetMNV.Size = new System.Drawing.Size(67, 23);
             this.btnGetMNV.TabIndex = 13;
@@ -148,7 +157,7 @@
             this.txtMieuTa.Multiline = true;
             this.txtMieuTa.Name = "txtMieuTa";
             this.txtMieuTa.Size = new System.Drawing.Size(243, 187);
-            this.txtMieuTa.TabIndex = 12;
+            this.txtMieuTa.TabIndex = 6;
             this.txtMieuTa.Leave += new System.EventHandler(this.txtMieuTa_Leave);
             // 
             // lblMieuTa
@@ -162,16 +171,16 @@
             // 
             // txtCuoc
             // 
-            this.txtCuoc.Location = new System.Drawing.Point(132, 168);
+            this.txtCuoc.Location = new System.Drawing.Point(132, 167);
             this.txtCuoc.Name = "txtCuoc";
             this.txtCuoc.Size = new System.Drawing.Size(165, 20);
-            this.txtCuoc.TabIndex = 10;
+            this.txtCuoc.TabIndex = 5;
             this.txtCuoc.Leave += new System.EventHandler(this.txtCuoc_Leave);
             // 
             // lblCuoc
             // 
             this.lblCuoc.AutoSize = true;
-            this.lblCuoc.Location = new System.Drawing.Point(31, 169);
+            this.lblCuoc.Location = new System.Drawing.Point(19, 170);
             this.lblCuoc.Name = "lblCuoc";
             this.lblCuoc.Size = new System.Drawing.Size(91, 13);
             this.lblCuoc.TabIndex = 9;
@@ -179,16 +188,16 @@
             // 
             // txtKichThuoc
             // 
-            this.txtKichThuoc.Location = new System.Drawing.Point(132, 128);
+            this.txtKichThuoc.Location = new System.Drawing.Point(132, 131);
             this.txtKichThuoc.Name = "txtKichThuoc";
             this.txtKichThuoc.Size = new System.Drawing.Size(165, 20);
-            this.txtKichThuoc.TabIndex = 7;
+            this.txtKichThuoc.TabIndex = 4;
             this.txtKichThuoc.Leave += new System.EventHandler(this.txtKichThuoc_Leave);
             // 
             // lblKichThuoc
             // 
             this.lblKichThuoc.AutoSize = true;
-            this.lblKichThuoc.Location = new System.Drawing.Point(31, 130);
+            this.lblKichThuoc.Location = new System.Drawing.Point(19, 134);
             this.lblKichThuoc.Name = "lblKichThuoc";
             this.lblKichThuoc.Size = new System.Drawing.Size(80, 13);
             this.lblKichThuoc.TabIndex = 6;
@@ -196,16 +205,16 @@
             // 
             // txtKhoiLuong
             // 
-            this.txtKhoiLuong.Location = new System.Drawing.Point(132, 88);
+            this.txtKhoiLuong.Location = new System.Drawing.Point(132, 95);
             this.txtKhoiLuong.Name = "txtKhoiLuong";
             this.txtKhoiLuong.Size = new System.Drawing.Size(165, 20);
-            this.txtKhoiLuong.TabIndex = 4;
+            this.txtKhoiLuong.TabIndex = 3;
             this.txtKhoiLuong.Leave += new System.EventHandler(this.txtKhoiLuong_Leave);
             // 
             // lblKhoiLuong
             // 
             this.lblKhoiLuong.AutoSize = true;
-            this.lblKhoiLuong.Location = new System.Drawing.Point(31, 91);
+            this.lblKhoiLuong.Location = new System.Drawing.Point(19, 98);
             this.lblKhoiLuong.Name = "lblKhoiLuong";
             this.lblKhoiLuong.Size = new System.Drawing.Size(78, 13);
             this.lblKhoiLuong.TabIndex = 3;
@@ -213,7 +222,7 @@
             // 
             // txtMaNhanVien
             // 
-            this.txtMaNhanVien.Location = new System.Drawing.Point(132, 49);
+            this.txtMaNhanVien.Location = new System.Drawing.Point(132, 59);
             this.txtMaNhanVien.Name = "txtMaNhanVien";
             this.txtMaNhanVien.Size = new System.Drawing.Size(92, 20);
             this.txtMaNhanVien.TabIndex = 2;
@@ -222,7 +231,7 @@
             // lblMNV
             // 
             this.lblMNV.AutoSize = true;
-            this.lblMNV.Location = new System.Drawing.Point(31, 52);
+            this.lblMNV.Location = new System.Drawing.Point(19, 62);
             this.lblMNV.Name = "lblMNV";
             this.lblMNV.Size = new System.Drawing.Size(95, 13);
             this.lblMNV.TabIndex = 0;
@@ -231,10 +240,10 @@
             // grpForm
             // 
             this.grpForm.Controls.Add(this.btnGetFrom);
-            this.grpForm.Controls.Add(this.label1);
+            this.grpForm.Controls.Add(this.lblSDTFrom);
             this.grpForm.Controls.Add(this.cbxGioiTinhFrom);
             this.grpForm.Controls.Add(this.txtDiaChiFrom);
-            this.grpForm.Controls.Add(this.lblDiaChi);
+            this.grpForm.Controls.Add(this.lblDiaChiFrom);
             this.grpForm.Controls.Add(this.txtSDTFrom);
             this.grpForm.Controls.Add(this.lblCanCuoc);
             this.grpForm.Controls.Add(this.txtCCCDFrom);
@@ -250,21 +259,21 @@
             // 
             // btnGetFrom
             // 
-            this.btnGetFrom.Location = new System.Drawing.Point(347, 15);
+            this.btnGetFrom.Location = new System.Drawing.Point(347, 12);
             this.btnGetFrom.Name = "btnGetFrom";
             this.btnGetFrom.Size = new System.Drawing.Size(67, 23);
             this.btnGetFrom.TabIndex = 14;
             this.btnGetFrom.Text = "Data...";
             this.btnGetFrom.UseVisualStyleBackColor = true;
             // 
-            // label1
+            // lblSDTFrom
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 139);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(70, 13);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Số điện thoại";
+            this.lblSDTFrom.AutoSize = true;
+            this.lblSDTFrom.Location = new System.Drawing.Point(15, 139);
+            this.lblSDTFrom.Name = "lblSDTFrom";
+            this.lblSDTFrom.Size = new System.Drawing.Size(70, 13);
+            this.lblSDTFrom.TabIndex = 12;
+            this.lblSDTFrom.Text = "Số điện thoại";
             // 
             // cbxGioiTinhFrom
             // 
@@ -275,7 +284,7 @@
             this.cbxGioiTinhFrom.Location = new System.Drawing.Point(103, 45);
             this.cbxGioiTinhFrom.Name = "cbxGioiTinhFrom";
             this.cbxGioiTinhFrom.Size = new System.Drawing.Size(104, 21);
-            this.cbxGioiTinhFrom.TabIndex = 11;
+            this.cbxGioiTinhFrom.TabIndex = 8;
             this.cbxGioiTinhFrom.Leave += new System.EventHandler(this.cbxGioiTinhFrom_Leave);
             // 
             // txtDiaChiFrom
@@ -286,21 +295,21 @@
             this.txtDiaChiFrom.TabIndex = 10;
             this.txtDiaChiFrom.Leave += new System.EventHandler(this.txtDiaChiFrom_Leave);
             // 
-            // lblDiaChi
+            // lblDiaChiFrom
             // 
-            this.lblDiaChi.AutoSize = true;
-            this.lblDiaChi.Location = new System.Drawing.Point(15, 109);
-            this.lblDiaChi.Name = "lblDiaChi";
-            this.lblDiaChi.Size = new System.Drawing.Size(40, 13);
-            this.lblDiaChi.TabIndex = 9;
-            this.lblDiaChi.Text = "Địa chỉ";
+            this.lblDiaChiFrom.AutoSize = true;
+            this.lblDiaChiFrom.Location = new System.Drawing.Point(15, 109);
+            this.lblDiaChiFrom.Name = "lblDiaChiFrom";
+            this.lblDiaChiFrom.Size = new System.Drawing.Size(40, 13);
+            this.lblDiaChiFrom.TabIndex = 9;
+            this.lblDiaChiFrom.Text = "Địa chỉ";
             // 
             // txtSDTFrom
             // 
             this.txtSDTFrom.Location = new System.Drawing.Point(103, 136);
             this.txtSDTFrom.Name = "txtSDTFrom";
             this.txtSDTFrom.Size = new System.Drawing.Size(226, 20);
-            this.txtSDTFrom.TabIndex = 8;
+            this.txtSDTFrom.TabIndex = 11;
             this.txtSDTFrom.Leave += new System.EventHandler(this.txtSDTFrom_Leave);
             // 
             // lblCanCuoc
@@ -317,7 +326,7 @@
             this.txtCCCDFrom.Location = new System.Drawing.Point(103, 76);
             this.txtCCCDFrom.Name = "txtCCCDFrom";
             this.txtCCCDFrom.Size = new System.Drawing.Size(226, 20);
-            this.txtCCCDFrom.TabIndex = 6;
+            this.txtCCCDFrom.TabIndex = 9;
             this.txtCCCDFrom.Leave += new System.EventHandler(this.txtCCCDFrom_Leave);
             // 
             // lblGioiTinh
@@ -334,7 +343,7 @@
             this.txtNameFrom.Location = new System.Drawing.Point(103, 15);
             this.txtNameFrom.Name = "txtNameFrom";
             this.txtNameFrom.Size = new System.Drawing.Size(226, 20);
-            this.txtNameFrom.TabIndex = 4;
+            this.txtNameFrom.TabIndex = 7;
             this.txtNameFrom.Leave += new System.EventHandler(this.txtNameFrom_Leave);
             // 
             // lblNameFrom
@@ -349,16 +358,16 @@
             // grmTo
             // 
             this.grmTo.Controls.Add(this.btnGetTo);
-            this.grmTo.Controls.Add(this.label2);
+            this.grmTo.Controls.Add(this.lblSDTTo);
             this.grmTo.Controls.Add(this.cbxGioiTinhTo);
             this.grmTo.Controls.Add(this.txtDiaChiTo);
-            this.grmTo.Controls.Add(this.label3);
+            this.grmTo.Controls.Add(this.lblDiaChiTo);
             this.grmTo.Controls.Add(this.txtSDTTo);
-            this.grmTo.Controls.Add(this.label4);
+            this.grmTo.Controls.Add(this.lblCCCDTo);
             this.grmTo.Controls.Add(this.txtCCCDTo);
-            this.grmTo.Controls.Add(this.label5);
+            this.grmTo.Controls.Add(this.lblGioiTinhTo);
             this.grmTo.Controls.Add(this.txtNameTo);
-            this.grmTo.Controls.Add(this.label6);
+            this.grmTo.Controls.Add(this.lblNameTo);
             this.grmTo.Location = new System.Drawing.Point(355, 190);
             this.grmTo.Name = "grmTo";
             this.grmTo.Size = new System.Drawing.Size(433, 188);
@@ -375,14 +384,14 @@
             this.btnGetTo.Text = "Data...";
             this.btnGetTo.UseVisualStyleBackColor = true;
             // 
-            // label2
+            // lblSDTTo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(18, 157);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
-            this.label2.TabIndex = 22;
-            this.label2.Text = "Số điện thoại";
+            this.lblSDTTo.AutoSize = true;
+            this.lblSDTTo.Location = new System.Drawing.Point(18, 157);
+            this.lblSDTTo.Name = "lblSDTTo";
+            this.lblSDTTo.Size = new System.Drawing.Size(70, 13);
+            this.lblSDTTo.TabIndex = 22;
+            this.lblSDTTo.Text = "Số điện thoại";
             // 
             // cbxGioiTinhTo
             // 
@@ -393,7 +402,7 @@
             this.cbxGioiTinhTo.Location = new System.Drawing.Point(103, 57);
             this.cbxGioiTinhTo.Name = "cbxGioiTinhTo";
             this.cbxGioiTinhTo.Size = new System.Drawing.Size(104, 21);
-            this.cbxGioiTinhTo.TabIndex = 21;
+            this.cbxGioiTinhTo.TabIndex = 13;
             this.cbxGioiTinhTo.Leave += new System.EventHandler(this.cbxGioiTinhTo_Leave);
             // 
             // txtDiaChiTo
@@ -401,68 +410,68 @@
             this.txtDiaChiTo.Location = new System.Drawing.Point(103, 122);
             this.txtDiaChiTo.Name = "txtDiaChiTo";
             this.txtDiaChiTo.Size = new System.Drawing.Size(226, 20);
-            this.txtDiaChiTo.TabIndex = 20;
+            this.txtDiaChiTo.TabIndex = 15;
             this.txtDiaChiTo.Leave += new System.EventHandler(this.txtDiaChiTo_Leave);
             // 
-            // label3
+            // lblDiaChiTo
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(18, 125);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(40, 13);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "Địa chỉ";
+            this.lblDiaChiTo.AutoSize = true;
+            this.lblDiaChiTo.Location = new System.Drawing.Point(18, 125);
+            this.lblDiaChiTo.Name = "lblDiaChiTo";
+            this.lblDiaChiTo.Size = new System.Drawing.Size(40, 13);
+            this.lblDiaChiTo.TabIndex = 19;
+            this.lblDiaChiTo.Text = "Địa chỉ";
             // 
             // txtSDTTo
             // 
             this.txtSDTTo.Location = new System.Drawing.Point(103, 154);
             this.txtSDTTo.Name = "txtSDTTo";
             this.txtSDTTo.Size = new System.Drawing.Size(226, 20);
-            this.txtSDTTo.TabIndex = 18;
+            this.txtSDTTo.TabIndex = 16;
             this.txtSDTTo.Leave += new System.EventHandler(this.txtSDTTo_Leave);
             // 
-            // label4
+            // lblCCCDTo
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(18, 93);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
-            this.label4.TabIndex = 17;
-            this.label4.Text = "CCCD/CMND";
+            this.lblCCCDTo.AutoSize = true;
+            this.lblCCCDTo.Location = new System.Drawing.Point(18, 93);
+            this.lblCCCDTo.Name = "lblCCCDTo";
+            this.lblCCCDTo.Size = new System.Drawing.Size(73, 13);
+            this.lblCCCDTo.TabIndex = 17;
+            this.lblCCCDTo.Text = "CCCD/CMND";
             // 
             // txtCCCDTo
             // 
             this.txtCCCDTo.Location = new System.Drawing.Point(103, 90);
             this.txtCCCDTo.Name = "txtCCCDTo";
             this.txtCCCDTo.Size = new System.Drawing.Size(226, 20);
-            this.txtCCCDTo.TabIndex = 16;
+            this.txtCCCDTo.TabIndex = 14;
             this.txtCCCDTo.Leave += new System.EventHandler(this.txtCCCDTo_Leave);
             // 
-            // label5
+            // lblGioiTinhTo
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(18, 61);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(47, 13);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Giới tính";
+            this.lblGioiTinhTo.AutoSize = true;
+            this.lblGioiTinhTo.Location = new System.Drawing.Point(18, 61);
+            this.lblGioiTinhTo.Name = "lblGioiTinhTo";
+            this.lblGioiTinhTo.Size = new System.Drawing.Size(47, 13);
+            this.lblGioiTinhTo.TabIndex = 15;
+            this.lblGioiTinhTo.Text = "Giới tính";
             // 
             // txtNameTo
             // 
             this.txtNameTo.Location = new System.Drawing.Point(103, 25);
             this.txtNameTo.Name = "txtNameTo";
             this.txtNameTo.Size = new System.Drawing.Size(226, 20);
-            this.txtNameTo.TabIndex = 14;
+            this.txtNameTo.TabIndex = 12;
             this.txtNameTo.Leave += new System.EventHandler(this.txtNameTo_Leave);
             // 
-            // label6
+            // lblNameTo
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(18, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(54, 13);
-            this.label6.TabIndex = 13;
-            this.label6.Text = "Họ và tên";
+            this.lblNameTo.AutoSize = true;
+            this.lblNameTo.Location = new System.Drawing.Point(18, 29);
+            this.lblNameTo.Name = "lblNameTo";
+            this.lblNameTo.Size = new System.Drawing.Size(54, 13);
+            this.lblNameTo.TabIndex = 13;
+            this.lblNameTo.Text = "Họ và tên";
             // 
             // errorProvider1
             // 
@@ -543,7 +552,7 @@
             this.btnHuy.Text = "Huỷ";
             this.btnHuy.UseVisualStyleBackColor = true;
             // 
-            // ChanceDonHang
+            // frmChanceDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -553,7 +562,7 @@
             this.Controls.Add(this.grmTo);
             this.Controls.Add(this.grpForm);
             this.Controls.Add(this.grpDonHang);
-            this.Name = "ChanceDonHang";
+            this.Name = "frmChanceDonHang";
             this.Load += new System.EventHandler(this.frmNewDonHang_Load);
             this.grpDonHang.ResumeLayout(false);
             this.grpDonHang.PerformLayout();
@@ -613,28 +622,29 @@
         private System.Windows.Forms.Label lblMieuTa;
         private System.Windows.Forms.ComboBox cbxGioiTinhFrom;
         private System.Windows.Forms.TextBox txtDiaChiFrom;
-        private System.Windows.Forms.Label lblDiaChi;
+        private System.Windows.Forms.Label lblDiaChiFrom;
         private System.Windows.Forms.TextBox txtSDTFrom;
         private System.Windows.Forms.Label lblCanCuoc;
         private System.Windows.Forms.TextBox txtCCCDFrom;
         private System.Windows.Forms.Label lblGioiTinh;
         private System.Windows.Forms.TextBox txtNameFrom;
         private System.Windows.Forms.Label lblNameFrom;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblSDTFrom;
+        private System.Windows.Forms.Label lblSDTTo;
         private System.Windows.Forms.ComboBox cbxGioiTinhTo;
         private System.Windows.Forms.TextBox txtDiaChiTo;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblDiaChiTo;
         private System.Windows.Forms.TextBox txtSDTTo;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCCCDTo;
         private System.Windows.Forms.TextBox txtCCCDTo;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lblGioiTinhTo;
         private System.Windows.Forms.TextBox txtNameTo;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblNameTo;
         private System.Windows.Forms.Button btnGetMNV;
         private System.Windows.Forms.Button btnHuy;
         private System.Windows.Forms.Button btnOK;
         private System.Windows.Forms.Button btnGetFrom;
         private System.Windows.Forms.Button btnGetTo;
+        private System.Windows.Forms.TextBox txtMaDonHang;
     }
 }

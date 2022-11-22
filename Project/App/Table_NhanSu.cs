@@ -42,5 +42,22 @@ namespace App
             finally { con.Close(); }
         }
 
+        private void btnThem_Click(object sender, EventArgs e)
+        {
+            frmChanceNhanSu chanceNhanSu = new frmChanceNhanSu();
+            chanceNhanSu.Text = "Thêm nhân viên";
+            chanceNhanSu.ShowDialog();
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+            frmChanceNhanSu chanceNhanSu = new frmChanceNhanSu();
+            chanceNhanSu.Text = "Chỉnh sửa thông tin nhân viên";
+            chanceNhanSu.ShowDialog();
+        }
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

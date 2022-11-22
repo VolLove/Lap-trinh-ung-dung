@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class ChanceDonHang : Form
+    public partial class frmChanceDonHang : Form
     {
         SqlConnection connection = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
 
-        public ChanceDonHang()
+        public frmChanceDonHang()
         {
             InitializeComponent();
 
@@ -22,29 +22,34 @@ namespace App
 
         private void frmNewDonHang_Load(object sender, EventArgs e)
         {
-            SqlCommand cmdDonHang = new SqlCommand();
-            string stringDonHang = "Đơn hàng: ";
-            DateTime dateTime;
-            DataTable tbDonHang = new DataTable(); 
-            SqlDataAdapter da = new SqlDataAdapter();
-            try
+            if (this.Text== "Đơn hàng mới")
             {
-                dateTime= DateTime.Now;
-                connection.Open();
-                cmdDonHang.CommandText = "sp_SelectDonHang";
-                cmdDonHang.CommandType = CommandType.StoredProcedure;
-                cmdDonHang.Connection = connection;
-                da.SelectCommand = cmdDonHang;
-                tbDonHang.Clear();
-                da.Fill(tbDonHang); 
-                stringDonHang = stringDonHang+ tbDonHang.Rows.Count.ToString() + dateTime.DayOfYear + dateTime.Year;
-               lblMaDonHang.Text = stringDonHang;
+                SqlCommand cmdDonHang = new SqlCommand();
+                string stringDonHang = "";
+                DateTime dateTime = DateTime.Now;
+                DataTable tbDonHang = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter();
+                try
+                {
+                    dateTime = DateTime.Now;
+                    connection.Open();
+                    cmdDonHang.CommandText = "sp_SelectDonHang";
+                    cmdDonHang.CommandType = CommandType.StoredProcedure;
+                    cmdDonHang.Connection = connection;
+                    da.SelectCommand = cmdDonHang;
+                    tbDonHang.Clear();
+                    da.Fill(tbDonHang);
+                    stringDonHang = stringDonHang + tbDonHang.Rows.Count.ToString() + dateTime.DayOfYear + dateTime.Year;
+                    txtMaDonHang.Text = stringDonHang;
+                    txtMaDonHang.Enabled = false;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error/n" + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally { connection.Close(); }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error/n" + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally { connection.Close(); }
+         
         }
         private bool bl = true;
 
