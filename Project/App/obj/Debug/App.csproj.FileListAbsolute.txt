@@ -35,4 +35,4 @@ F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.exe
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.pdb
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmTableDonHang.resources
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmTableKhachHang.resources
-F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmTableNhanVien.resources
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\App.frmTableNhanSu.resources

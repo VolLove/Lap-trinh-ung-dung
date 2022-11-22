@@ -1,6 +1,6 @@
 ﻿namespace App
 {
-    partial class frmTableNhanVien
+    partial class frmTableNhanSu
     {
         /// <summary>
         /// Required designer variable.
@@ -71,7 +71,7 @@
             this.dvgDonHang.Size = new System.Drawing.Size(776, 328);
             this.dvgDonHang.TabIndex = 4;
             // 
-            // frmTableNhanVien
+            // frmTableNhanSu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,8 +80,8 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.dvgDonHang);
-            this.Name = "frmTableNhanVien";
-            this.Text = "NhanVien";
+            this.Name = "frmTableNhanSu";
+            this.Text = "Quản lý nhân sự";
             ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).EndInit();
             this.ResumeLayout(false);
 

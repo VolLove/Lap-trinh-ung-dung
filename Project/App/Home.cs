@@ -19,26 +19,36 @@ namespace App
             InitializeComponent();
         }
 
-        private void danhSáchToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmTableDonHang frmDanh = new frmTableDonHang();
-            frmDanh.Show();
 
+        private void mnuDonHang_Click(object sender, EventArgs e)
+        {
+            frmTableDonHang tableDonHang = new frmTableDonHang();
+            tableDonHang.ShowDialog();
         }
 
-        private void đơnMớiToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuLogOut_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmLogin login = new frmLogin();
+            login.ShowDialog();
+            this.Close();
         }
 
-        private void nhânViênToolStripMenuItem_Click(object sender, EventArgs e)
-        {
 
+        private void mnuKhachHang_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmTableKhachHang tableKhachHang = new frmTableKhachHang();
+            tableKhachHang.ShowDialog();
+            this.Close();
         }
 
-        private void phòngToolStripMenuItem_Click(object sender, EventArgs e)
+        private void mnuNhanVien_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            frmTableNhanSu tableNhanSu = new frmTableNhanSu();
+            tableNhanSu.ShowDialog();
+            this.Close();
         }
     }
 }

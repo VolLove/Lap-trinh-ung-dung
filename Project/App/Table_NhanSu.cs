@@ -10,10 +10,10 @@ using System.Windows.Forms;
 
 namespace App
 {
-    public partial class frmTableNhanVien : Form
+    public partial class frmTableNhanSu : Form
     {
         SqlConnection con = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
-        public frmTableNhanVien()
+        public frmTableNhanSu()
         {
             InitializeComponent();
             loadData();
