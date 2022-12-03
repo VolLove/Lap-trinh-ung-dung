@@ -8,16 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace App
+namespace GUI_App
 {
-    public partial class frmTable_PhongBan : Form
+    public partial class frmTablePhongBan : Form
     {
-        SqlConnection connection = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
-        public frmTable_PhongBan()
+        public frmTablePhongBan()
         {
             InitializeComponent();
+            loadData();
         }
 
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
         private void loadData()
         {
             SqlDataAdapter da = new SqlDataAdapter();
@@ -26,10 +27,10 @@ namespace App
 
             try
             {
-                connection.Open();
-                cmdDonHang.CommandText = "sp_SelectNhanVien";
+                con.Open();
+                cmdDonHang.CommandText = "sp_SelectPhongBan";
                 cmdDonHang.CommandType = CommandType.StoredProcedure;
-                cmdDonHang.Connection = connection;
+                cmdDonHang.Connection = con;
                 da.SelectCommand = cmdDonHang;
                 tbDonHang.Clear();
                 da.Fill(tbDonHang);
@@ -39,25 +40,7 @@ namespace App
             {
                 MessageBox.Show("Error/n" + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            finally { connection.Close(); }
-        }
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            frmChancePhongBan chancePhongBan = new frmChancePhongBan();
-            chancePhongBan.Text = "Phòng ban mới";
-            chancePhongBan.ShowDialog();
-        }
-
-     
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            frmChancePhongBan chancePhongBan = new frmChancePhongBan();
-            chancePhongBan.Text = "Chỉnh sửa thông tin phòng ban";
-            chancePhongBan.ShowDialog();
-        }
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
+            finally { con.Close(); }
         }
     }
 }

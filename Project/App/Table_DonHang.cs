@@ -8,17 +8,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace App
 {
     public partial class frmTableDonHang : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
+    
 
         public frmTableDonHang()
         {
             InitializeComponent();
             loadData();
         }
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
         private void loadData()
         {
             SqlDataAdapter da = new SqlDataAdapter();
@@ -43,31 +45,6 @@ namespace App
             finally { con.Close(); }
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            frmChanceDonHang chanceDonHang = new frmChanceDonHang();
-            chanceDonHang.ShowDialog();
-        }
-
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            frmChanceDonHang chanceDonHang = new frmChanceDonHang();
-            chanceDonHang.Text = "Chỉnh sửa đơn hàng";
-            chanceDonHang.ShowDialog();
-        }
-
-
-        private void dvgDonHang_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            frmChanceDonHang chanceDonHang = new frmChanceDonHang();
-            chanceDonHang.Text = "Đơn hàng mới";
-
-            chanceDonHang.ShowDialog();
-        }
 
     }
 }

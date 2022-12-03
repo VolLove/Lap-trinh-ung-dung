@@ -1,0 +1,6 @@
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DOT_App\bin\Debug\DOT_App.dll
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DOT_App\bin\Debug\DOT_App.pdb
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DOT_App\obj\Debug\DOT_App.csproj.AssemblyReference.cache
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DOT_App\obj\Debug\DOT_App.csproj.CoreCompileInputs.cache
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DOT_App\obj\Debug\DOT_App.dll
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DOT_App\obj\Debug\DOT_App.pdb

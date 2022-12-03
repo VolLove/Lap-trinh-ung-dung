@@ -12,12 +12,12 @@ namespace App
 {
     public partial class frmTableKhachHang : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
         public frmTableKhachHang()
         {
             InitializeComponent();
             loadData();
         }
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
         private void loadData()
         {
             SqlDataAdapter da = new SqlDataAdapter();
@@ -40,24 +40,6 @@ namespace App
                 MessageBox.Show("Error/n" + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally { con.Close(); }
-        }
-
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            frmChanceKhachHang chanceKhachHang = new frmChanceKhachHang();
-            chanceKhachHang.Text = "Khách hàng mới";
-            chanceKhachHang.ShowDialog();
-        }     
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            frmChanceKhachHang chanceKhachHang = new frmChanceKhachHang();
-            chanceKhachHang.Text = "Chỉnh sửa thông tin khách hàng";
-            chanceKhachHang.ShowDialog();
-        }
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

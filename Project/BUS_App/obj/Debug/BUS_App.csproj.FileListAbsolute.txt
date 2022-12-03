@@ -1,0 +1,11 @@
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\BUS_App\bin\Debug\BUS_App.dll
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\BUS_App\bin\Debug\BUS_App.pdb
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\BUS_App\obj\Debug\BUS_App.csproj.AssemblyReference.cache
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\BUS_App\obj\Debug\BUS_App.csproj.CoreCompileInputs.cache
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\BUS_App\obj\Debug\BUS_App.dll
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\BUS_App\obj\Debug\BUS_App.pdb
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\BUS_App\bin\Debug\DAL_App.dll
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\BUS_App\bin\Debug\DOT_App.dll
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\BUS_App\bin\Debug\DAL_App.pdb
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\BUS_App\bin\Debug\DOT_App.pdb
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\BUS_App\obj\Debug\BUS_App.csproj.CopyComplete

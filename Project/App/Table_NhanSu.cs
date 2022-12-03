@@ -12,28 +12,28 @@ namespace App
 {
     public partial class frmTableNhanSu : Form
     {
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
         public frmTableNhanSu()
         {
             InitializeComponent();
             loadData();
         }
+        SqlConnection con = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
         private void loadData()
         {
             SqlDataAdapter da = new SqlDataAdapter();
-            SqlCommand cmdDonHang = new SqlCommand();
-            DataTable tbDonHang = new DataTable();
+            SqlCommand cmdNhanSu = new SqlCommand();
+            DataTable tbNhanSu = new DataTable();
 
             try
             {
                 con.Open();
-                cmdDonHang.CommandText = "sp_SelectNhanVien";
-                cmdDonHang.CommandType = CommandType.StoredProcedure;
-                cmdDonHang.Connection = con;
-                da.SelectCommand = cmdDonHang;
-                tbDonHang.Clear();
-                da.Fill(tbDonHang);
-                dvgDonHang.DataSource = tbDonHang;
+                cmdNhanSu.CommandText = "sp_SelectNhanVien";
+                cmdNhanSu.CommandType = CommandType.StoredProcedure;
+                cmdNhanSu.Connection = con;
+                da.SelectCommand = cmdNhanSu;
+                tbNhanSu.Clear();
+                da.Fill(tbNhanSu);
+                dvgDonHang.DataSource = tbNhanSu;
             }
             catch (Exception ex)
             {
@@ -42,22 +42,5 @@ namespace App
             finally { con.Close(); }
         }
 
-        private void btnThem_Click(object sender, EventArgs e)
-        {
-            frmChanceNhanSu chanceNhanSu = new frmChanceNhanSu();
-            chanceNhanSu.Text = "Thêm nhân viên";
-            chanceNhanSu.ShowDialog();
-        }
-
-        private void btnSua_Click(object sender, EventArgs e)
-        {
-            frmChanceNhanSu chanceNhanSu = new frmChanceNhanSu();
-            chanceNhanSu.Text = "Chỉnh sửa thông tin nhân viên";
-            chanceNhanSu.ShowDialog();
-        }
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

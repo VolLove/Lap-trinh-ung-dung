@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GUI_App;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -50,24 +51,18 @@ namespace App
             }
         }
 
-        private void mnuDanhsachDonHang_Click(object sender, EventArgs e)
-        {
-            frmTableDonHang tableDonHang = new frmTableDonHang();
-            tableDonHang.ShowDialog();
 
-        }
-
-        private void mnuNewDonHang_Click(object sender, EventArgs e)
-        {
-            frmChanceDonHang chanceDonHang = new frmChanceDonHang();
-            chanceDonHang.Text = "Đơn hàng mới";
-            chanceDonHang.ShowDialog();
-        }
 
         private void mnuPhongBan_Click(object sender, EventArgs e)
         {
-            frmTable_PhongBan chancePhongBan = new frmTable_PhongBan();
-            chancePhongBan.ShowDialog();
+            frmTablePhongBan tablePhongBan = new frmTablePhongBan();
+            tablePhongBan.ShowDialog();
+        }
+
+        private void mnuDonHang_Click(object sender, EventArgs e)
+        {
+            frmTableDonHang  tableDonHang = new frmTableDonHang();
+            tableDonHang.ShowDialog(); 
         }
     }
 }
