@@ -39,7 +39,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="bus_DonHang.cs" />
+    <Compile Include="bus_KhachHang.cs" />
+    <Compile Include="bus_NhanVien.cs" />
+    <Compile Include="bus_PhongBan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -47,9 +50,9 @@
       <Project>{0353d005-9820-4302-929c-a9318bf5a757}</Project>
       <Name>DAL_App</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DOT_App\DOT_App.csproj">
-      <Project>{3da64545-2bdc-4384-b2da-18f8aa5776da}</Project>
-      <Name>DOT_App</Name>
+    <ProjectReference Include="..\DTO_App\DTO_App.csproj">
+      <Project>{1d4091fd-dd29-4d8f-869a-71948b2006d2}</Project>
+      <Name>DTO_App</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,6 @@
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DTO_App\bin\Debug\DTO_App.dll
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DTO_App\bin\Debug\DTO_App.pdb
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DTO_App\obj\Debug\DTO_App.csproj.AssemblyReference.cache
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DTO_App\obj\Debug\DTO_App.csproj.CoreCompileInputs.cache
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DTO_App\obj\Debug\DTO_App.dll
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DTO_App\obj\Debug\DTO_App.pdb

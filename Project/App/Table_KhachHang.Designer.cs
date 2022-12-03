@@ -199,6 +199,7 @@
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.lblGioiTinh);
             this.Name = "frmTableKhachHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khách hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).EndInit();
             this.grpKhachHang.ResumeLayout(false);

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUS_App;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,35 +13,11 @@ namespace App
 {
     public partial class frmTableNhanSu : Form
     {
+        bus_NhanVien busNhanVien = new bus_NhanVien();
         public frmTableNhanSu()
         {
             InitializeComponent();
-            loadData();
+            dvgDonHang.DataSource = busNhanVien.selectNhanVien();
         }
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
-        private void loadData()
-        {
-            SqlDataAdapter da = new SqlDataAdapter();
-            SqlCommand cmdNhanSu = new SqlCommand();
-            DataTable tbNhanSu = new DataTable();
-
-            try
-            {
-                con.Open();
-                cmdNhanSu.CommandText = "sp_SelectNhanVien";
-                cmdNhanSu.CommandType = CommandType.StoredProcedure;
-                cmdNhanSu.Connection = con;
-                da.SelectCommand = cmdNhanSu;
-                tbNhanSu.Clear();
-                da.Fill(tbNhanSu);
-                dvgDonHang.DataSource = tbNhanSu;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error/n" + ex.Message, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-            finally { con.Close(); }
-        }
-
     }
 }

@@ -39,13 +39,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ConnectionDB.cs" />
+    <Compile Include="dal_DonHang.cs" />
+    <Compile Include="dal_KhachHang.cs" />
+    <Compile Include="dal_NhanVien.cs" />
+    <Compile Include="dal_PhongBan.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DOT_App\DOT_App.csproj">
-      <Project>{3da64545-2bdc-4384-b2da-18f8aa5776da}</Project>
-      <Name>DOT_App</Name>
+    <ProjectReference Include="..\DTO_App\DTO_App.csproj">
+      <Project>{1d4091fd-dd29-4d8f-869a-71948b2006d2}</Project>
+      <Name>DTO_App</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

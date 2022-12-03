@@ -50,6 +50,7 @@
             this.lblCanCuoc = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).BeginInit();
             this.grpDanhSach.SuspendLayout();
             this.SuspendLayout();
@@ -64,19 +65,21 @@
             this.dvgDonHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgDonHang.Size = new System.Drawing.Size(779, 184);
             this.dvgDonHang.TabIndex = 0;
+            this.dvgDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgDonHang_CellClick);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(221, 224);
+            this.btnThem.Location = new System.Drawing.Point(108, 224);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 1;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(354, 224);
+            this.btnXoa.Location = new System.Drawing.Point(230, 224);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 2;
@@ -84,7 +87,7 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(491, 224);
+            this.btnSua.Location = new System.Drawing.Point(352, 224);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 3;
@@ -235,12 +238,22 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(619, 224);
+            this.btnPrint.Location = new System.Drawing.Point(474, 224);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 23);
             this.btnPrint.TabIndex = 3;
             this.btnPrint.Text = "In";
             this.btnPrint.UseVisualStyleBackColor = true;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(596, 224);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 1;
+            this.btnClose.Text = "Thoát";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // frmTableDonHang
             // 
@@ -263,12 +276,14 @@
             this.Controls.Add(this.txtKichThuoc);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.lblKichThuoc);
+            this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtKhoiLuong);
             this.Controls.Add(this.lblKhoiLuong);
             this.Controls.Add(this.lblMaDonHang);
             this.Controls.Add(this.lblMNV);
             this.Name = "frmTableDonHang";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Danh sách đơn hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).EndInit();
             this.grpDanhSach.ResumeLayout(false);
@@ -301,5 +316,6 @@
         private System.Windows.Forms.Label lblCanCuoc;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPrint;
+        private System.Windows.Forms.Button btnClose;
     }
 }

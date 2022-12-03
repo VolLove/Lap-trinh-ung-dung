@@ -157,6 +157,7 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.grpPhongBan);
             this.Name = "frmTablePhongBan";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý phòng ban";
             ((System.ComponentModel.ISupportInitialize)(this.dvgPhongBan)).EndInit();
             this.grpPhongBan.ResumeLayout(false);

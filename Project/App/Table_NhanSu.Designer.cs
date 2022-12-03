@@ -299,6 +299,7 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
             this.Name = "frmTableNhanSu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý nhân sự";
             ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).EndInit();
             this.grpNhanSu.ResumeLayout(false);

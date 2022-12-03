@@ -7,44 +7,35 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using BUS_App;
+using DTO_App;
 
 
 namespace App
 {
     public partial class frmTableDonHang : Form
     {
-    
-
+        
+        bus_DonHang donHang = new bus_DonHang();
+        
         public frmTableDonHang()
         {
             InitializeComponent();
-            loadData();
+            dvgDonHang.DataSource = donHang.selectDonHang();
         }
-        SqlConnection con = new SqlConnection("Data Source=DESKTOP-2PT5DI6;Initial Catalog=PROJECT;Integrated Security=True");
-        private void loadData()
+     
+
+        private void btnThem_Click(object sender, EventArgs e)
         {
-            SqlDataAdapter da = new SqlDataAdapter();
-            SqlCommand cmdDonHang = new SqlCommand();
-            DataTable tbDonHang = new DataTable();
-
-            try
-            {
-                con.Open();
-                cmdDonHang.CommandText = "sp_SelectDonHang";
-                cmdDonHang.CommandType = CommandType.StoredProcedure;
-                cmdDonHang.Connection = con;
-                da.SelectCommand= cmdDonHang;
-                tbDonHang.Clear();
-                da.Fill(tbDonHang);
-                dvgDonHang.DataSource = tbDonHang;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Error/n" + ex.Message,"ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
-            }
-            finally { con.Close(); }
+            this.Close();
         }
 
-
+        private void dvgDonHang_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if(e.RowIndex >= 0) {
+                DataGridViewRow row = this.dvgDonHang.Rows[e.RowIndex];
+                txtMaDonHang.Text = row.Cells[0].Value.ToString();
+            }
+        }
     }
 }

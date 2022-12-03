@@ -201,3 +201,6 @@ create proc sp_SelectDonHang
 as
 select * from DONHANG;
 go
+
+
+exec sp_InsertDonHang @maDonHang =''

@@ -147,13 +147,9 @@
       <Project>{d97f66f8-676a-4370-ba9b-6b27e1a49d49}</Project>
       <Name>BUS_App</Name>
     </ProjectReference>
-    <ProjectReference Include="..\DAL_App\DAL_App.csproj">
-      <Project>{0353d005-9820-4302-929c-a9318bf5a757}</Project>
-      <Name>DAL_App</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DOT_App\DOT_App.csproj">
-      <Project>{3da64545-2bdc-4384-b2da-18f8aa5776da}</Project>
-      <Name>DOT_App</Name>
+    <ProjectReference Include="..\DTO_App\DTO_App.csproj">
+      <Project>{1d4091fd-dd29-4d8f-869a-71948b2006d2}</Project>
+      <Name>DTO_App</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

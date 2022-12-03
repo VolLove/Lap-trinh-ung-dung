@@ -15,7 +15,7 @@ F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\GUI_App.c
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\GUI_App.exe
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\GUI_App.pdb
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\obj\Debug\GUI_App.frmTablePhongBan.resources
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\bin\Debug\DTO_App.dll
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\bin\Debug\DTO_App.pdb
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\bin\Debug\DAL_App.dll
-F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\bin\Debug\DOT_App.dll
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\bin\Debug\DAL_App.pdb
-F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\bin\Debug\DOT_App.pdb
