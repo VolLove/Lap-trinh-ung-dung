@@ -19,3 +19,4 @@ F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\bin\Debug\DTO_App.d
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\bin\Debug\DTO_App.pdb
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\bin\Debug\DAL_App.dll
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\bin\Debug\DAL_App.pdb
+F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\App\bin\Debug\GUI_App.exe.config

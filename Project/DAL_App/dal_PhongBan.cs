@@ -56,16 +56,20 @@ namespace DAL_App
                 cmdPhongBan.Parameters.Add(new SqlParameter("@maQL", phongBan.MaQL));
                 cmdPhongBan.Parameters.Add(new SqlParameter("@tenPhong", phongBan.TenPhong));
 
+                if (cmdPhongBan.ExecuteNonQuery()>0)
+                {
+                    return true;
+                }
             }
             catch (Exception)
             {
-                return false;
             }
             finally
             {
                 connection.Close();
             }
-            return true;
+            return false;
+
         }
         public bool updateDonHang(dto_PhongBan phongBan)
         {
@@ -83,17 +87,21 @@ namespace DAL_App
                 cmdPhongBan.Parameters.Add(new SqlParameter("@maQL", phongBan.MaQL));
                 cmdPhongBan.Parameters.Add(new SqlParameter("@tenPhong", phongBan.TenPhong));
 
+                if (cmdPhongBan.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
 
             }
             catch (Exception)
             {
-                return false;
             }
             finally
             {
                 connection.Close();
             }
-            return true;
+            return false;
+
         }
         public bool deleteDonHang(string maPhong)
         {
@@ -103,23 +111,27 @@ namespace DAL_App
             {
                 connection.Open();
                 cmdPhongBan = new SqlCommand();
-                cmdPhongBan.CommandText = "sp_UpdatePhongBan";
+                cmdPhongBan.CommandText = "sp_DeletePhongBan";
                 cmdPhongBan.CommandType = CommandType.StoredProcedure;
                 cmdPhongBan.Connection = connection;
 
-                cmdPhongBan.Parameters.Add(new SqlParameter("@maPhongBan", maPhong));
+                cmdPhongBan.Parameters.Add(new SqlParameter("@maPhong", maPhong));
 
+                if (cmdPhongBan.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
 
             }
             catch (Exception)
             {
-                return false;
             }
             finally
             {
                 connection.Close();
             }
-            return true;
+            return false;
+
         }
     }
 }

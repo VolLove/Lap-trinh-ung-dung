@@ -16,21 +16,18 @@ namespace DTO_App
        
         public dto_KhachHang()
         {
-            this.phai = "Nam";
-            this.hoVaTen = "";
-            this.diaChi = "";
-            this.sdt = "";
         }
+        dto_DonHang _DonHang = new dto_DonHang();
         public dto_KhachHang(string cCCD, string phai, string hoVaTen, string diaChi, string sdt)
         {
-            this.cCCD = cCCD;
+            this.cCCD = cCCD.ToUpper();
             this.phai = phai;
             this.hoVaTen = hoVaTen;
             this.diaChi = diaChi;
             this.sdt = sdt;
         }
 
-        public string CCCD { get => cCCD; set => cCCD = value; }
+        public string CCCD { get => cCCD.ToUpper(); set => cCCD = value; }
         public string Phai { get => phai; set => phai = value; }
         public string HoVaTen { get => hoVaTen; set => hoVaTen = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }

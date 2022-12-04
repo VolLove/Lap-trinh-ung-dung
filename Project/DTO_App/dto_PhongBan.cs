@@ -28,14 +28,11 @@ namespace DTO_App
         public string GetMaPhongAuto()
         {
             string code = "";
-            DateTime dateTime = DateTime.Now;
             code = code + "PB";
-            code = code + dateTime.Day.ToString();
-            code = code + dateTime.Month.ToString();
-            code = code + dateTime.Year.ToString();
-            code = code + dateTime.Hour.ToString();
-            code = code + dateTime.Minute.ToString();
-            code = code + dateTime.Second.ToString();
+            DateTime dateTime = DateTime.Now;
+            code += dateTime.DayOfYear.ToString();
+            code += dateTime.Minute.ToString();
+            code += dateTime.Second.ToString();
             return code;
         }
     }

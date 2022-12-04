@@ -39,6 +39,7 @@ namespace DAL_App
             }
             return tbKhachHang;
         }
+
         public bool insertKhachHang(dto_KhachHang khachHang)
         {
 
@@ -51,22 +52,25 @@ namespace DAL_App
                 cmdKhachHang.CommandType = CommandType.StoredProcedure;
                 cmdKhachHang.Connection = connection;
 
-                cmdKhachHang.Parameters.Add(new SqlParameter("@CanCuoc", khachHang.CCCD));
-                cmdKhachHang.Parameters.Add(new SqlParameter("@hovaten", khachHang.CCCD));
-                cmdKhachHang.Parameters.Add(new SqlParameter("@diaChi", khachHang.CCCD));
-                cmdKhachHang.Parameters.Add(new SqlParameter("@sdt", khachHang.CCCD));
-
+                cmdKhachHang.Parameters.Add(new SqlParameter("@cccd", khachHang.CCCD));
+                cmdKhachHang.Parameters.Add(new SqlParameter("@phai", khachHang.Phai));
+                cmdKhachHang.Parameters.Add(new SqlParameter("@hoVaTen", khachHang.HoVaTen));
+                cmdKhachHang.Parameters.Add(new SqlParameter("@diaChi", khachHang.DiaChi));
+                cmdKhachHang.Parameters.Add(new SqlParameter("@sdt", khachHang.Sdt));
+                if (cmdKhachHang.ExecuteNonQuery()>0)
+                {
+                    return true;
+                }
 
             }
             catch (Exception)
             {
-                return false;
             }
             finally
             {
                 connection.Close();
             }
-            return true;
+            return false;
         }
         public bool updateKhachHang(dto_KhachHang khachHang)
         {
@@ -80,22 +84,25 @@ namespace DAL_App
                 cmdKhachHang.CommandType = CommandType.StoredProcedure;
                 cmdKhachHang.Connection = connection;
 
-                cmdKhachHang.Parameters.Add(new SqlParameter("@CanCuoc", khachHang.CCCD));
-                cmdKhachHang.Parameters.Add(new SqlParameter("@hovaten", khachHang.CCCD));
-                cmdKhachHang.Parameters.Add(new SqlParameter("@diaChi", khachHang.CCCD));
-                cmdKhachHang.Parameters.Add(new SqlParameter("@sdt", khachHang.CCCD));
-
+                cmdKhachHang.Parameters.Add(new SqlParameter("@cccd", khachHang.CCCD));
+                cmdKhachHang.Parameters.Add(new SqlParameter("@phai", khachHang.Phai));
+                cmdKhachHang.Parameters.Add(new SqlParameter("@hoVaTen", khachHang.HoVaTen));
+                cmdKhachHang.Parameters.Add(new SqlParameter("@diaChi", khachHang.DiaChi));
+                cmdKhachHang.Parameters.Add(new SqlParameter("@sdt", khachHang.Sdt));
+                if (cmdKhachHang.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
 
             }
             catch (Exception)
             {
-                return false;
             }
             finally
             {
                 connection.Close();
             }
-            return true;
+            return false;
         }
         public bool deleteKhachHang(string cCCD)
         {
@@ -105,23 +112,26 @@ namespace DAL_App
             {
                 connection.Open();
                 cmdKhachHang = new SqlCommand();
-                cmdKhachHang.CommandText = "sp_UpdateDonHang";
+                cmdKhachHang.CommandText = "sp_DeleteKhachHang";
                 cmdKhachHang.CommandType = CommandType.StoredProcedure;
                 cmdKhachHang.Connection = connection;
 
-                cmdKhachHang.Parameters.Add(new SqlParameter("@CanCuoc", cCCD));
+                cmdKhachHang.Parameters.Add(new SqlParameter("@cccd", cCCD));
 
+                if (cmdKhachHang.ExecuteNonQuery() > 0)
+                {
+                    return true;
+                }
 
             }
             catch (Exception)
             {
-                return false;
             }
             finally
             {
                 connection.Close();
             }
-            return true;
+            return false;
         }
     }
 }

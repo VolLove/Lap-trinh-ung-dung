@@ -28,7 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dvgPhongBan = new System.Windows.Forms.DataGridView();
+            this.components = new System.ComponentModel.Container();
+            this.dgvPhongBan = new System.Windows.Forms.DataGridView();
             this.grpPhongBan = new System.Windows.Forms.GroupBox();
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -39,25 +40,34 @@
             this.txtMaPhong = new System.Windows.Forms.TextBox();
             this.txtTenPhong = new System.Windows.Forms.TextBox();
             this.cboMaQL = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgPhongBan)).BeginInit();
+            this.btnClose = new System.Windows.Forms.Button();
+            this.btnLoad = new System.Windows.Forms.Button();
+            this.errMaPhong = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errNamePhong = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnNewCode = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
             this.grpPhongBan.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errMaPhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errNamePhong)).BeginInit();
             this.SuspendLayout();
             // 
-            // dvgPhongBan
+            // dgvPhongBan
             // 
-            this.dvgPhongBan.AllowUserToDeleteRows = false;
-            this.dvgPhongBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgPhongBan.Location = new System.Drawing.Point(6, 19);
-            this.dvgPhongBan.MultiSelect = false;
-            this.dvgPhongBan.Name = "dvgPhongBan";
-            this.dvgPhongBan.ReadOnly = true;
-            this.dvgPhongBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgPhongBan.Size = new System.Drawing.Size(458, 401);
-            this.dvgPhongBan.TabIndex = 9;
+            this.dgvPhongBan.AllowUserToDeleteRows = false;
+            this.dgvPhongBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhongBan.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvPhongBan.Location = new System.Drawing.Point(3, 16);
+            this.dgvPhongBan.MultiSelect = false;
+            this.dgvPhongBan.Name = "dgvPhongBan";
+            this.dgvPhongBan.ReadOnly = true;
+            this.dgvPhongBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvPhongBan.Size = new System.Drawing.Size(464, 407);
+            this.dgvPhongBan.TabIndex = 9;
+            this.dgvPhongBan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongBan_CellDoubleClick);
             // 
             // grpPhongBan
             // 
-            this.grpPhongBan.Controls.Add(this.dvgPhongBan);
+            this.grpPhongBan.Controls.Add(this.dgvPhongBan);
             this.grpPhongBan.Location = new System.Drawing.Point(12, 12);
             this.grpPhongBan.Name = "grpPhongBan";
             this.grpPhongBan.Size = new System.Drawing.Size(470, 426);
@@ -67,30 +77,33 @@
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(697, 276);
+            this.btnSua.Location = new System.Drawing.Point(713, 197);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 10;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(597, 276);
+            this.btnXoa.Location = new System.Drawing.Point(613, 197);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 9;
             this.btnXoa.Text = "Xoá";
             this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(497, 276);
+            this.btnThem.Location = new System.Drawing.Point(513, 197);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 8;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // lblMaPhong
             // 
@@ -123,8 +136,9 @@
             // 
             this.txtMaPhong.Location = new System.Drawing.Point(588, 43);
             this.txtMaPhong.Name = "txtMaPhong";
-            this.txtMaPhong.Size = new System.Drawing.Size(162, 20);
+            this.txtMaPhong.Size = new System.Drawing.Size(100, 20);
             this.txtMaPhong.TabIndex = 12;
+            this.txtMaPhong.Leave += new System.EventHandler(this.txtMaPhong_Leave);
             // 
             // txtTenPhong
             // 
@@ -132,6 +146,7 @@
             this.txtTenPhong.Name = "txtTenPhong";
             this.txtTenPhong.Size = new System.Drawing.Size(162, 20);
             this.txtTenPhong.TabIndex = 12;
+            this.txtTenPhong.Leave += new System.EventHandler(this.txtTenPhong_Leave);
             // 
             // cboMaQL
             // 
@@ -141,17 +156,58 @@
             this.cboMaQL.Size = new System.Drawing.Size(162, 21);
             this.cboMaQL.TabIndex = 13;
             // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(665, 246);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(75, 23);
+            this.btnClose.TabIndex = 14;
+            this.btnClose.Text = "Thoát";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // btnLoad
+            // 
+            this.btnLoad.Location = new System.Drawing.Point(542, 246);
+            this.btnLoad.Name = "btnLoad";
+            this.btnLoad.Size = new System.Drawing.Size(75, 23);
+            this.btnLoad.TabIndex = 15;
+            this.btnLoad.Text = "Refresh";
+            this.btnLoad.UseVisualStyleBackColor = true;
+            this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
+            // 
+            // errMaPhong
+            // 
+            this.errMaPhong.ContainerControl = this;
+            // 
+            // errNamePhong
+            // 
+            this.errNamePhong.ContainerControl = this;
+            // 
+            // btnNewCode
+            // 
+            this.btnNewCode.Location = new System.Drawing.Point(713, 41);
+            this.btnNewCode.Name = "btnNewCode";
+            this.btnNewCode.Size = new System.Drawing.Size(75, 23);
+            this.btnNewCode.TabIndex = 10;
+            this.btnNewCode.Text = "New code";
+            this.btnNewCode.UseVisualStyleBackColor = true;
+            this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
+            // 
             // frmTablePhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnLoad);
             this.Controls.Add(this.cboMaQL);
             this.Controls.Add(this.txtTenPhong);
             this.Controls.Add(this.txtMaPhong);
             this.Controls.Add(this.lblQuanLy);
             this.Controls.Add(this.lblTenPhong);
             this.Controls.Add(this.lblMaPhong);
+            this.Controls.Add(this.btnNewCode);
             this.Controls.Add(this.btnSua);
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.btnThem);
@@ -159,8 +215,10 @@
             this.Name = "frmTablePhongBan";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Quản lý phòng ban";
-            ((System.ComponentModel.ISupportInitialize)(this.dvgPhongBan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).EndInit();
             this.grpPhongBan.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errMaPhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errNamePhong)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,7 +226,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dvgPhongBan;
+        private System.Windows.Forms.DataGridView dgvPhongBan;
         private System.Windows.Forms.GroupBox grpPhongBan;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
@@ -179,5 +237,10 @@
         private System.Windows.Forms.TextBox txtMaPhong;
         private System.Windows.Forms.TextBox txtTenPhong;
         private System.Windows.Forms.ComboBox cboMaQL;
+        private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.Button btnLoad;
+        private System.Windows.Forms.ErrorProvider errMaPhong;
+        private System.Windows.Forms.Button btnNewCode;
+        private System.Windows.Forms.ErrorProvider errNamePhong;
     }
 }

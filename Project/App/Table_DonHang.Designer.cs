@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dvgDonHang = new System.Windows.Forms.DataGridView();
+            this.dgvDonHang = new System.Windows.Forms.DataGridView();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -60,7 +60,15 @@
             this.errMaNV = new System.Windows.Forms.ErrorProvider(this.components);
             this.errCCCDGui = new System.Windows.Forms.ErrorProvider(this.components);
             this.errCCCDNhan = new System.Windows.Forms.ErrorProvider(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).BeginInit();
+            this.lblDiachiGui = new System.Windows.Forms.Label();
+            this.llblDiaChiNhan = new System.Windows.Forms.Label();
+            this.txtDiaChiNhan = new System.Windows.Forms.TextBox();
+            this.txtDiaChiGui = new System.Windows.Forms.TextBox();
+            this.btnNewCode = new System.Windows.Forms.Button();
+            this.errDiaChiGui = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errDiaChiNhan = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnLoadDGV = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).BeginInit();
             this.grpDanhSach.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errMaDonHang)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errKhoiLuong)).BeginInit();
@@ -70,51 +78,57 @@
             ((System.ComponentModel.ISupportInitialize)(this.errMaNV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errCCCDGui)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errCCCDNhan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errDiaChiGui)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errDiaChiNhan)).BeginInit();
             this.SuspendLayout();
             // 
-            // dvgDonHang
+            // dgvDonHang
             // 
-            this.dvgDonHang.AllowUserToDeleteRows = false;
-            this.dvgDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgDonHang.Location = new System.Drawing.Point(6, 19);
-            this.dvgDonHang.Name = "dvgDonHang";
-            this.dvgDonHang.ReadOnly = true;
-            this.dvgDonHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgDonHang.Size = new System.Drawing.Size(779, 184);
-            this.dvgDonHang.TabIndex = 9999;
-            this.dvgDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgDonHang_CellClick);
+            this.dgvDonHang.AllowUserToDeleteRows = false;
+            this.dgvDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDonHang.Location = new System.Drawing.Point(3, 16);
+            this.dgvDonHang.Name = "dgvDonHang";
+            this.dgvDonHang.ReadOnly = true;
+            this.dgvDonHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDonHang.Size = new System.Drawing.Size(785, 190);
+            this.dgvDonHang.TabIndex = 99;
+            this.dgvDonHang.TabStop = false;
+            this.dgvDonHang.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDonHang_CellDoubleClick);
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(108, 224);
+            this.btnThem.Location = new System.Drawing.Point(91, 224);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
-            this.btnThem.TabIndex = 1;
+            this.btnThem.TabIndex = 10;
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(230, 224);
+            this.btnXoa.Location = new System.Drawing.Point(299, 224);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
-            this.btnXoa.TabIndex = 2;
+            this.btnXoa.TabIndex = 12;
             this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(352, 224);
+            this.btnSua.Location = new System.Drawing.Point(199, 224);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
-            this.btnSua.TabIndex = 3;
+            this.btnSua.TabIndex = 11;
             this.btnSua.Text = "Sửa";
             this.btnSua.UseVisualStyleBackColor = true;
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // grpDanhSach
             // 
-            this.grpDanhSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
-            this.grpDanhSach.Controls.Add(this.dvgDonHang);
+            this.grpDanhSach.BackColor = System.Drawing.Color.Transparent;
+            this.grpDanhSach.Controls.Add(this.dgvDonHang);
             this.grpDanhSach.Location = new System.Drawing.Point(3, 9);
             this.grpDanhSach.Name = "grpDanhSach";
             this.grpDanhSach.Size = new System.Drawing.Size(791, 209);
@@ -124,11 +138,11 @@
             // 
             // txtMaDonHang
             // 
-            this.txtMaDonHang.Enabled = false;
             this.txtMaDonHang.Location = new System.Drawing.Point(162, 253);
             this.txtMaDonHang.Name = "txtMaDonHang";
-            this.txtMaDonHang.Size = new System.Drawing.Size(121, 20);
+            this.txtMaDonHang.Size = new System.Drawing.Size(127, 20);
             this.txtMaDonHang.TabIndex = 0;
+            this.txtMaDonHang.Leave += new System.EventHandler(this.txtMaDonHang_Leave);
             // 
             // txtMieuTa
             // 
@@ -136,7 +150,7 @@
             this.txtMieuTa.Multiline = true;
             this.txtMieuTa.Name = "txtMieuTa";
             this.txtMieuTa.Size = new System.Drawing.Size(243, 89);
-            this.txtMieuTa.TabIndex = 7;
+            this.txtMieuTa.TabIndex = 9;
             // 
             // lblMieuTa
             // 
@@ -152,7 +166,8 @@
             this.txtCuoc.Location = new System.Drawing.Point(517, 313);
             this.txtCuoc.Name = "txtCuoc";
             this.txtCuoc.Size = new System.Drawing.Size(165, 20);
-            this.txtCuoc.TabIndex = 6;
+            this.txtCuoc.TabIndex = 8;
+            this.txtCuoc.Leave += new System.EventHandler(this.txtCuoc_Leave);
             // 
             // lblCuoc
             // 
@@ -168,7 +183,8 @@
             this.txtKichThuoc.Location = new System.Drawing.Point(517, 283);
             this.txtKichThuoc.Name = "txtKichThuoc";
             this.txtKichThuoc.Size = new System.Drawing.Size(165, 20);
-            this.txtKichThuoc.TabIndex = 5;
+            this.txtKichThuoc.TabIndex = 7;
+            this.txtKichThuoc.Leave += new System.EventHandler(this.txtKichThuoc_Leave);
             // 
             // lblKichThuoc
             // 
@@ -184,7 +200,8 @@
             this.txtKhoiLuong.Location = new System.Drawing.Point(517, 253);
             this.txtKhoiLuong.Name = "txtKhoiLuong";
             this.txtKhoiLuong.Size = new System.Drawing.Size(165, 20);
-            this.txtKhoiLuong.TabIndex = 4;
+            this.txtKhoiLuong.TabIndex = 6;
+            this.txtKhoiLuong.Leave += new System.EventHandler(this.txtKhoiLuong_Leave);
             // 
             // lblKhoiLuong
             // 
@@ -198,7 +215,7 @@
             // lblMNV
             // 
             this.lblMNV.AutoSize = true;
-            this.lblMNV.Location = new System.Drawing.Point(37, 295);
+            this.lblMNV.Location = new System.Drawing.Point(50, 288);
             this.lblMNV.Name = "lblMNV";
             this.lblMNV.Size = new System.Drawing.Size(95, 13);
             this.lblMNV.TabIndex = 0;
@@ -207,7 +224,7 @@
             // lblMaDonHang
             // 
             this.lblMaDonHang.AutoSize = true;
-            this.lblMaDonHang.Location = new System.Drawing.Point(37, 256);
+            this.lblMaDonHang.Location = new System.Drawing.Point(50, 260);
             this.lblMaDonHang.Name = "lblMaDonHang";
             this.lblMaDonHang.Size = new System.Drawing.Size(71, 13);
             this.lblMaDonHang.TabIndex = 1;
@@ -216,34 +233,34 @@
             // cboMaNV
             // 
             this.cboMaNV.FormattingEnabled = true;
-            this.cboMaNV.Location = new System.Drawing.Point(162, 292);
+            this.cboMaNV.Location = new System.Drawing.Point(162, 281);
             this.cboMaNV.Name = "cboMaNV";
-            this.cboMaNV.Size = new System.Drawing.Size(121, 21);
+            this.cboMaNV.Size = new System.Drawing.Size(143, 21);
             this.cboMaNV.TabIndex = 1;
             this.cboMaNV.Leave += new System.EventHandler(this.cboMaNV_Leave);
             // 
             // cboCCCDNhan
             // 
             this.cboCCCDNhan.FormattingEnabled = true;
-            this.cboCCCDNhan.Location = new System.Drawing.Point(162, 372);
+            this.cboCCCDNhan.Location = new System.Drawing.Point(162, 339);
             this.cboCCCDNhan.Name = "cboCCCDNhan";
-            this.cboCCCDNhan.Size = new System.Drawing.Size(121, 21);
+            this.cboCCCDNhan.Size = new System.Drawing.Size(143, 21);
             this.cboCCCDNhan.TabIndex = 3;
             this.cboCCCDNhan.Leave += new System.EventHandler(this.cboCCCDNhan_Leave);
             // 
             // cboCCCDGui
             // 
             this.cboCCCDGui.FormattingEnabled = true;
-            this.cboCCCDGui.Location = new System.Drawing.Point(162, 332);
+            this.cboCCCDGui.Location = new System.Drawing.Point(162, 310);
             this.cboCCCDGui.Name = "cboCCCDGui";
-            this.cboCCCDGui.Size = new System.Drawing.Size(121, 21);
+            this.cboCCCDGui.Size = new System.Drawing.Size(143, 21);
             this.cboCCCDGui.TabIndex = 2;
             this.cboCCCDGui.Leave += new System.EventHandler(this.cboCCCDGui_Leave);
             // 
             // lblCanCuoc
             // 
             this.lblCanCuoc.AutoSize = true;
-            this.lblCanCuoc.Location = new System.Drawing.Point(37, 334);
+            this.lblCanCuoc.Location = new System.Drawing.Point(50, 316);
             this.lblCanCuoc.Name = "lblCanCuoc";
             this.lblCanCuoc.Size = new System.Drawing.Size(95, 13);
             this.lblCanCuoc.TabIndex = 15;
@@ -252,7 +269,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(37, 373);
+            this.label1.Location = new System.Drawing.Point(50, 344);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 13);
             this.label1.TabIndex = 16;
@@ -260,19 +277,19 @@
             // 
             // btnPrint
             // 
-            this.btnPrint.Location = new System.Drawing.Point(474, 224);
+            this.btnPrint.Location = new System.Drawing.Point(431, 224);
             this.btnPrint.Name = "btnPrint";
             this.btnPrint.Size = new System.Drawing.Size(75, 23);
-            this.btnPrint.TabIndex = 3;
+            this.btnPrint.TabIndex = 13;
             this.btnPrint.Text = "In";
             this.btnPrint.UseVisualStyleBackColor = true;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(596, 224);
+            this.btnClose.Location = new System.Drawing.Point(664, 224);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
-            this.btnClose.TabIndex = 1;
+            this.btnClose.TabIndex = 15;
             this.btnClose.Text = "Thoát";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
@@ -309,11 +326,78 @@
             // 
             this.errCCCDNhan.ContainerControl = this;
             // 
+            // lblDiachiGui
+            // 
+            this.lblDiachiGui.AutoSize = true;
+            this.lblDiachiGui.Location = new System.Drawing.Point(50, 372);
+            this.lblDiachiGui.Name = "lblDiachiGui";
+            this.lblDiachiGui.Size = new System.Drawing.Size(57, 13);
+            this.lblDiachiGui.TabIndex = 1;
+            this.lblDiachiGui.Text = "Địa chỉ gửi";
+            // 
+            // llblDiaChiNhan
+            // 
+            this.llblDiaChiNhan.AutoSize = true;
+            this.llblDiaChiNhan.Location = new System.Drawing.Point(50, 400);
+            this.llblDiaChiNhan.Name = "llblDiaChiNhan";
+            this.llblDiaChiNhan.Size = new System.Drawing.Size(67, 13);
+            this.llblDiaChiNhan.TabIndex = 16;
+            this.llblDiaChiNhan.Text = "Địa chỉ nhận";
+            // 
+            // txtDiaChiNhan
+            // 
+            this.txtDiaChiNhan.Location = new System.Drawing.Point(162, 396);
+            this.txtDiaChiNhan.Name = "txtDiaChiNhan";
+            this.txtDiaChiNhan.Size = new System.Drawing.Size(212, 20);
+            this.txtDiaChiNhan.TabIndex = 5;
+            this.txtDiaChiNhan.Leave += new System.EventHandler(this.txtDiaChiNhan_Leave);
+            // 
+            // txtDiaChiGui
+            // 
+            this.txtDiaChiGui.Location = new System.Drawing.Point(162, 368);
+            this.txtDiaChiGui.Name = "txtDiaChiGui";
+            this.txtDiaChiGui.Size = new System.Drawing.Size(212, 20);
+            this.txtDiaChiGui.TabIndex = 4;
+            this.txtDiaChiGui.Leave += new System.EventHandler(this.txtDiaChiGui_Leave);
+            // 
+            // btnNewCode
+            // 
+            this.btnNewCode.Location = new System.Drawing.Point(299, 253);
+            this.btnNewCode.Name = "btnNewCode";
+            this.btnNewCode.Size = new System.Drawing.Size(75, 23);
+            this.btnNewCode.TabIndex = 19;
+            this.btnNewCode.TabStop = false;
+            this.btnNewCode.Text = "New";
+            this.btnNewCode.UseVisualStyleBackColor = true;
+            this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
+            // 
+            // errDiaChiGui
+            // 
+            this.errDiaChiGui.ContainerControl = this;
+            // 
+            // errDiaChiNhan
+            // 
+            this.errDiaChiNhan.ContainerControl = this;
+            // 
+            // btnLoadDGV
+            // 
+            this.btnLoadDGV.Location = new System.Drawing.Point(559, 224);
+            this.btnLoadDGV.Name = "btnLoadDGV";
+            this.btnLoadDGV.Size = new System.Drawing.Size(75, 23);
+            this.btnLoadDGV.TabIndex = 14;
+            this.btnLoadDGV.Text = "Refresh";
+            this.btnLoadDGV.UseVisualStyleBackColor = true;
+            this.btnLoadDGV.Click += new System.EventHandler(this.btnLoadDGV_Click);
+            // 
             // frmTableDonHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(799, 450);
+            this.Controls.Add(this.btnNewCode);
+            this.Controls.Add(this.txtDiaChiGui);
+            this.Controls.Add(this.txtDiaChiNhan);
+            this.Controls.Add(this.llblDiaChiNhan);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblCanCuoc);
             this.Controls.Add(this.cboCCCDGui);
@@ -331,15 +415,17 @@
             this.Controls.Add(this.btnXoa);
             this.Controls.Add(this.lblKichThuoc);
             this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.btnLoadDGV);
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.txtKhoiLuong);
             this.Controls.Add(this.lblKhoiLuong);
+            this.Controls.Add(this.lblDiachiGui);
             this.Controls.Add(this.lblMaDonHang);
             this.Controls.Add(this.lblMNV);
             this.Name = "frmTableDonHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Danh sách đơn hàng";
-            ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).EndInit();
+            this.Text = "Quản lý đơn hàng";
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDonHang)).EndInit();
             this.grpDanhSach.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errMaDonHang)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errKhoiLuong)).EndInit();
@@ -349,6 +435,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.errMaNV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errCCCDGui)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errCCCDNhan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errDiaChiGui)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errDiaChiNhan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -356,7 +444,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dvgDonHang;
+        private System.Windows.Forms.DataGridView dgvDonHang;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
@@ -387,5 +475,13 @@
         private System.Windows.Forms.ErrorProvider errMaNV;
         private System.Windows.Forms.ErrorProvider errCCCDGui;
         private System.Windows.Forms.ErrorProvider errCCCDNhan;
+        private System.Windows.Forms.TextBox txtDiaChiGui;
+        private System.Windows.Forms.TextBox txtDiaChiNhan;
+        private System.Windows.Forms.Label llblDiaChiNhan;
+        private System.Windows.Forms.Label lblDiachiGui;
+        private System.Windows.Forms.Button btnNewCode;
+        private System.Windows.Forms.ErrorProvider errDiaChiGui;
+        private System.Windows.Forms.ErrorProvider errDiaChiNhan;
+        private System.Windows.Forms.Button btnLoadDGV;
     }
 }
