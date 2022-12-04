@@ -18,7 +18,6 @@ namespace DAL_App
         public DataTable selectKhachHang()
         {
 
-
             try
             {
                 connection.Open();

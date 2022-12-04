@@ -39,13 +39,11 @@
             this.dtmNgaySinh = new System.Windows.Forms.DateTimePicker();
             this.lblNgaySinh = new System.Windows.Forms.Label();
             this.txtMaNhanVien = new System.Windows.Forms.TextBox();
-            this.txtNameTen = new System.Windows.Forms.TextBox();
-            this.lblNameTen = new System.Windows.Forms.Label();
             this.lblMaNhanVien = new System.Windows.Forms.Label();
             this.lblSDT = new System.Windows.Forms.Label();
             this.txtSDT = new System.Windows.Forms.TextBox();
             this.cboGioiTinh = new System.Windows.Forms.ComboBox();
-            this.lblNameHo = new System.Windows.Forms.Label();
+            this.lblName = new System.Windows.Forms.Label();
             this.txtDiaChi = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblDiaChi = new System.Windows.Forms.Label();
@@ -152,22 +150,6 @@
             this.txtMaNhanVien.Size = new System.Drawing.Size(104, 20);
             this.txtMaNhanVien.TabIndex = 51;
             // 
-            // txtNameTen
-            // 
-            this.txtNameTen.Location = new System.Drawing.Point(279, 273);
-            this.txtNameTen.Name = "txtNameTen";
-            this.txtNameTen.Size = new System.Drawing.Size(103, 20);
-            this.txtNameTen.TabIndex = 50;
-            // 
-            // lblNameTen
-            // 
-            this.lblNameTen.AutoSize = true;
-            this.lblNameTen.Location = new System.Drawing.Point(247, 276);
-            this.lblNameTen.Name = "lblNameTen";
-            this.lblNameTen.Size = new System.Drawing.Size(26, 13);
-            this.lblNameTen.TabIndex = 49;
-            this.lblNameTen.Text = "Tên";
-            // 
             // lblMaNhanVien
             // 
             this.lblMaNhanVien.AutoSize = true;
@@ -204,14 +186,14 @@
             this.cboGioiTinh.Size = new System.Drawing.Size(87, 21);
             this.cboGioiTinh.TabIndex = 46;
             // 
-            // lblNameHo
+            // lblName
             // 
-            this.lblNameHo.AutoSize = true;
-            this.lblNameHo.Location = new System.Drawing.Point(29, 282);
-            this.lblNameHo.Name = "lblNameHo";
-            this.lblNameHo.Size = new System.Drawing.Size(21, 13);
-            this.lblNameHo.TabIndex = 38;
-            this.lblNameHo.Text = "Họ";
+            this.lblName.AutoSize = true;
+            this.lblName.Location = new System.Drawing.Point(29, 282);
+            this.lblName.Name = "lblName";
+            this.lblName.Size = new System.Drawing.Size(54, 13);
+            this.lblName.TabIndex = 38;
+            this.lblName.Text = "Họ và tên";
             // 
             // txtDiaChi
             // 
@@ -224,7 +206,7 @@
             // 
             this.txtName.Location = new System.Drawing.Point(130, 273);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(111, 20);
+            this.txtName.Size = new System.Drawing.Size(226, 20);
             this.txtName.TabIndex = 39;
             // 
             // lblDiaChi
@@ -281,13 +263,11 @@
             this.Controls.Add(this.dtmNgaySinh);
             this.Controls.Add(this.lblNgaySinh);
             this.Controls.Add(this.txtMaNhanVien);
-            this.Controls.Add(this.txtNameTen);
-            this.Controls.Add(this.lblNameTen);
             this.Controls.Add(this.lblMaNhanVien);
             this.Controls.Add(this.lblSDT);
             this.Controls.Add(this.txtSDT);
             this.Controls.Add(this.cboGioiTinh);
-            this.Controls.Add(this.lblNameHo);
+            this.Controls.Add(this.lblName);
             this.Controls.Add(this.txtDiaChi);
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblDiaChi);
@@ -321,13 +301,11 @@
         private System.Windows.Forms.DateTimePicker dtmNgaySinh;
         private System.Windows.Forms.Label lblNgaySinh;
         private System.Windows.Forms.TextBox txtMaNhanVien;
-        private System.Windows.Forms.TextBox txtNameTen;
-        private System.Windows.Forms.Label lblNameTen;
         private System.Windows.Forms.Label lblMaNhanVien;
         private System.Windows.Forms.Label lblSDT;
         private System.Windows.Forms.TextBox txtSDT;
         private System.Windows.Forms.ComboBox cboGioiTinh;
-        private System.Windows.Forms.Label lblNameHo;
+        private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox txtDiaChi;
         private System.Windows.Forms.TextBox txtName;
         private System.Windows.Forms.Label lblDiaChi;

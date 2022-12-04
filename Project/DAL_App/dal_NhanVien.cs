@@ -52,8 +52,7 @@ namespace DAL_App
                 cmdNhanVien.Connection = connection;
 
                 cmdNhanVien.Parameters.Add(new SqlParameter("@maNV", nhanVien.MaNV));
-                cmdNhanVien.Parameters.Add(new SqlParameter("@hoNV", nhanVien.HoNV));
-                cmdNhanVien.Parameters.Add(new SqlParameter("@tenNV", nhanVien.TenNV));
+                cmdNhanVien.Parameters.Add(new SqlParameter("@HovaTen", nhanVien.HoVaTenNV));
                 cmdNhanVien.Parameters.Add(new SqlParameter("@ngaySinh", nhanVien.NgaySinh));
                 cmdNhanVien.Parameters.Add(new SqlParameter("@diaChi", nhanVien.DiaChi));
                 cmdNhanVien.Parameters.Add(new SqlParameter("@canCuocCD", nhanVien.CCCD));
@@ -87,8 +86,7 @@ namespace DAL_App
                 cmdNhanVien.Connection = connection;
 
                 cmdNhanVien.Parameters.Add(new SqlParameter("@maNV", nhanVien.MaNV));
-                cmdNhanVien.Parameters.Add(new SqlParameter("@hoNV", nhanVien.HoNV));
-                cmdNhanVien.Parameters.Add(new SqlParameter("@tenNV", nhanVien.TenNV));
+                cmdNhanVien.Parameters.Add(new SqlParameter("@HovaTen", nhanVien.HoVaTenNV));
                 cmdNhanVien.Parameters.Add(new SqlParameter("@ngaySinh", nhanVien.NgaySinh));
                 cmdNhanVien.Parameters.Add(new SqlParameter("@diaChi", nhanVien.DiaChi));
                 cmdNhanVien.Parameters.Add(new SqlParameter("@canCuocCD", nhanVien.CCCD));

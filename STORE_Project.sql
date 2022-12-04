@@ -1,77 +1,10 @@
-
-drop database PROJECT
+--CREATE DATABASE PROJECT
 go
-CREATE DATABASE PROJECT
-go
-USE PROJECT
-go
-
-
-
-
-CREATE TABLE DONHANG(
-	MaDonHang varchar(10) not null PRIMARY KEY,
-	DiachiGui nvarchar(100) not null,
-	DiachiNhan nvarchar(100) not null,
-	CCCDNhan varchar(12) not null,
-	CCCDGui varchar(12) not null,
-	MieuTa nvarchar(200),
-	KhoiLuong float,
-	KichThuoc float,
-	Cuoc int,
-	MaNV varchar(10) not null
-)
-go
-CREATE TABLE KHACHHANG(
-	CanCuocCD varchar(12) not null primary KEY,
-	Phai nvarchar(5),
-	HovaTen nvarchar(50),
-	DiaChi nvarchar(50) not null,
-	SDT varchar(10)
-)
-go
-
-
-CREATE TABLE NHANVIEN(
-	MaNV varchar(10) not null primary key,
-	HoNV nvarchar(50) ,
-	TenNV nvarchar(30),
-	NgSinh date not null,
-	DiaChi nvarchar(50),
-	CanCuoc varchar(12) not null,
-	SDT varchar(10),
-	Phai nvarchar(5),
-	Luong float,
-	MaPhong varchar(10) not null
-
-)
-GO
-CREATE TABLE PHONGBAN(
-	MaPhong varchar(10) not null primary key,
-	MaQL varchar(10) not null,
-	TenPhong nvarchar(30),
-)
-GO
-
---CREATE FOREIGN KEY
-ALTER TABLE dbo.DONHANG ADD CONSTRAINT FK_NVHD FOREIGN KEY(MaNV) REFERENCES dbo.NHANVIEN(MaNV)
-go
-ALTER TABLE dbo.DONHANG ADD CONSTRAINT FK_KHNhan FOREIGN KEY(CCCDNhan) REFERENCES dbo.KHACHHANG(CanCuocCD)
-go
-ALTER TABLE dbo.DONHANG ADD CONSTRAINT FK_KHGUI FOREIGN KEY(CCCDGui) REFERENCES dbo.KHACHHANG(CanCuocCD)
-go
-ALTER TABLE dbo.PHONGBAN ADD CONSTRAINT FK_MQL FOREIGN KEY(MaQL) REFERENCES dbo.NHANVIEN(MaNV)
-go
-alter table dbo.NHANVIEN ADD CONSTRAINT FK_Phong foreign key(MaPhong) references dbo.PHONGBAN(MaPhong)
-go
-
-
-
 create proc sp_InsertNhanVien
-(@maNV varchar(10), @hoNV nvarchar(50), @tenNV nvarchar(30), @ngaySinh date, @diaChi nvarchar(50), @canCuocCD nvarchar(12), @sdt nvarchar(10), @phai nvarchar(5),@luong float,@maPhong varchar(10))
+(@maNV varchar(10),@HovaTen nvarchar(50), @ngaySinh date, @diaChi nvarchar(50), @canCuocCD nvarchar(12), @sdt nvarchar(10), @phai nvarchar(5),@luong float,@maPhong varchar(10))
 as
-	insert into NHANVIEN(MaNV,HoNV,TenNV,NgSinh,DiaChi,CanCuoc,SDT,Phai,Luong,MaPhong)
-	values (@maNV,@hoNV,@tenNV,@ngaySinh,@diaChi,@canCuocCD,@sdt,@phai,@luong,@maPhong)
+	insert into NHANVIEN(MaNV,HovaTen,NgSinh,DiaChi,CanCuoc,SDT,Phai,Luong,MaPhong)
+	values (@maNV,@HovaTen,@ngaySinh,@diaChi,@canCuocCD,@sdt,@phai,@luong,@maPhong)
 go
 
 create proc sp_DeleteNhanVien @manv varchar(10)
@@ -80,13 +13,12 @@ as
 go
 
 create proc sp_UpdateNhanVien 
-(@maNV varchar(10), @hoNV nvarchar(50), @tenNV nvarchar(30), @ngaySinh date, @diaChi nvarchar(50), @canCuocCD varchar(12), @sdt varchar(10), @phai nvarchar(5),@luong float,@maPhong varchar(10))
+(@maNV varchar(10), 	@HovaTen nvarchar(50), @ngaySinh date, @diaChi nvarchar(50), @canCuocCD varchar(12), @sdt varchar(10), @phai nvarchar(5),@luong float,@maPhong varchar(10))
 as
 	update NHANVIEN 
 	set
 	MaNV = @maNV,
-	HoNV = @hoNV,
-	TenNV = @tenNV,
+	HovaTen = @HovaTen,
 	NgSinh = @ngaySinh,
 	DiaChi = @diaChi,
 	CanCuoc = @canCuocCD,
@@ -129,7 +61,7 @@ as
 	SDT = @sdt
 	where CanCuocCD = @CanCuoc
 go
-create proc sp_SelectKhacHang
+create proc sp_SelectKhachHang
 as
 	select * from KHACHHANG
 go
@@ -201,6 +133,3 @@ create proc sp_SelectDonHang
 as
 select * from DONHANG;
 go
-
-
-exec sp_InsertDonHang @maDonHang =''

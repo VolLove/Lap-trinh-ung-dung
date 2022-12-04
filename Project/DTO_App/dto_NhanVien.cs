@@ -8,8 +8,7 @@ namespace DTO_App
     public class dto_NhanVien
     {
         private string maNV;
-        private string hoNV;
-        private string tenNV;
+        private string hoVaTenNV;
         private DateTime ngaySinh;
         private string diaChi;
         private string cCCD;
@@ -18,11 +17,12 @@ namespace DTO_App
         private float luong;
         private string maPhong;
 
-        public dto_NhanVien(string maNV, string hoNV, string tenNV, DateTime ngaySinh, string diaChi, string cCCD, string sDT, string phai, float luong, string maPhong)
+        public dto_NhanVien() {
+        }
+        public dto_NhanVien(string maNV, string hoVaTenNV, DateTime ngaySinh, string diaChi, string cCCD, string sDT, string phai, float luong, string maPhong)
         {
             this.maNV = maNV;
-            this.hoNV = hoNV;
-            this.tenNV = tenNV;
+            this.hoVaTenNV = hoVaTenNV;
             this.ngaySinh = ngaySinh;
             this.diaChi = diaChi;
             this.cCCD = cCCD;
@@ -33,8 +33,6 @@ namespace DTO_App
         }
 
         public string MaNV { get => maNV; set => maNV = value; }
-        public string HoNV { get => hoNV; set => hoNV = value; }
-        public string TenNV { get => tenNV; set => tenNV = value; }
         public DateTime NgaySinh { get => ngaySinh; set => ngaySinh = value; }
         public string DiaChi { get => diaChi; set => diaChi = value; }
         public string CCCD { get => cCCD; set => cCCD = value; }
@@ -42,5 +40,20 @@ namespace DTO_App
         public string Phai { get => phai; set => phai = value; }
         public float Luong { get => luong; set => luong = value; }
         public string MaPhong { get => maPhong; set => maPhong = value; }
+        public string HoVaTenNV { get => hoVaTenNV; set => hoVaTenNV = value; }
+
+        public string getMaNVAuto()
+        {
+            string code = "";
+            DateTime dateTime= DateTime.Now;
+            code = code + "NV";
+            code = code + dateTime.Day.ToString();
+            code = code + dateTime.Month.ToString();
+            code = code + dateTime.Year.ToString();
+            code = code + dateTime.Hour.ToString();
+            code = code + dateTime.Minute.ToString();
+            code = code + dateTime.Second.ToString();
+            return code;
+        }
     }
 }

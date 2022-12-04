@@ -18,6 +18,7 @@ namespace DTO_App
         private float cuoc;
         private string maNV;
 
+        public dto_DonHang() { }
         public dto_DonHang(string maDonHang, string diaChiNhan, string diaChiGui, string cCCDNhan, string cCCDGui, string mieuTa, float khoiLuong, float kichThuoc, float cuoc, string maNV)
         {
             this.maDonHang = maDonHang;
@@ -42,5 +43,20 @@ namespace DTO_App
         public float KichThuoc { get => kichThuoc; set => kichThuoc = value; }
         public float Cuoc { get => cuoc; set => cuoc = value; }
         public string MaNV { get => maNV; set => maNV = value; }
+
+        public string getMaHDAuto()
+        {
+            string code = "";       
+            DateTime dateTime = DateTime.Now;
+            code = code + "DH";
+            code = code + dateTime.Day.ToString();
+            code= code + dateTime.Month.ToString();
+            code= code + dateTime.Year.ToString();
+            code= code + dateTime.Hour.ToString();
+            code= code + dateTime.Minute.ToString();
+            code= code + dateTime.Second.ToString();
+            code = code + this.maNV;
+            return code;
+        }
     }
 }

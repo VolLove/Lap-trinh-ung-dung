@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.dvgDonHang = new System.Windows.Forms.DataGridView();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
@@ -51,8 +52,24 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnPrint = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.errMaDonHang = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errKhoiLuong = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errKichThuoc = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errCuocVanChuyen = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errMieuTa = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errMaNV = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errCCCDGui = new System.Windows.Forms.ErrorProvider(this.components);
+            this.errCCCDNhan = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).BeginInit();
             this.grpDanhSach.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.errMaDonHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errKhoiLuong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errKichThuoc)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCuocVanChuyen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMieuTa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMaNV)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCCCDGui)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCCCDNhan)).BeginInit();
             this.SuspendLayout();
             // 
             // dvgDonHang
@@ -64,7 +81,7 @@
             this.dvgDonHang.ReadOnly = true;
             this.dvgDonHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dvgDonHang.Size = new System.Drawing.Size(779, 184);
-            this.dvgDonHang.TabIndex = 0;
+            this.dvgDonHang.TabIndex = 9999;
             this.dvgDonHang.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dvgDonHang_CellClick);
             // 
             // btnThem
@@ -96,6 +113,7 @@
             // 
             // grpDanhSach
             // 
+            this.grpDanhSach.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(252)))), ((int)(((byte)(183)))), ((int)(((byte)(30)))));
             this.grpDanhSach.Controls.Add(this.dvgDonHang);
             this.grpDanhSach.Location = new System.Drawing.Point(3, 9);
             this.grpDanhSach.Name = "grpDanhSach";
@@ -106,10 +124,11 @@
             // 
             // txtMaDonHang
             // 
+            this.txtMaDonHang.Enabled = false;
             this.txtMaDonHang.Location = new System.Drawing.Point(162, 253);
             this.txtMaDonHang.Name = "txtMaDonHang";
             this.txtMaDonHang.Size = new System.Drawing.Size(121, 20);
-            this.txtMaDonHang.TabIndex = 1;
+            this.txtMaDonHang.TabIndex = 0;
             // 
             // txtMieuTa
             // 
@@ -117,7 +136,7 @@
             this.txtMieuTa.Multiline = true;
             this.txtMieuTa.Name = "txtMieuTa";
             this.txtMieuTa.Size = new System.Drawing.Size(243, 89);
-            this.txtMieuTa.TabIndex = 6;
+            this.txtMieuTa.TabIndex = 7;
             // 
             // lblMieuTa
             // 
@@ -133,7 +152,7 @@
             this.txtCuoc.Location = new System.Drawing.Point(517, 313);
             this.txtCuoc.Name = "txtCuoc";
             this.txtCuoc.Size = new System.Drawing.Size(165, 20);
-            this.txtCuoc.TabIndex = 5;
+            this.txtCuoc.TabIndex = 6;
             // 
             // lblCuoc
             // 
@@ -149,7 +168,7 @@
             this.txtKichThuoc.Location = new System.Drawing.Point(517, 283);
             this.txtKichThuoc.Name = "txtKichThuoc";
             this.txtKichThuoc.Size = new System.Drawing.Size(165, 20);
-            this.txtKichThuoc.TabIndex = 4;
+            this.txtKichThuoc.TabIndex = 5;
             // 
             // lblKichThuoc
             // 
@@ -165,7 +184,7 @@
             this.txtKhoiLuong.Location = new System.Drawing.Point(517, 253);
             this.txtKhoiLuong.Name = "txtKhoiLuong";
             this.txtKhoiLuong.Size = new System.Drawing.Size(165, 20);
-            this.txtKhoiLuong.TabIndex = 3;
+            this.txtKhoiLuong.TabIndex = 4;
             // 
             // lblKhoiLuong
             // 
@@ -200,7 +219,8 @@
             this.cboMaNV.Location = new System.Drawing.Point(162, 292);
             this.cboMaNV.Name = "cboMaNV";
             this.cboMaNV.Size = new System.Drawing.Size(121, 21);
-            this.cboMaNV.TabIndex = 12;
+            this.cboMaNV.TabIndex = 1;
+            this.cboMaNV.Leave += new System.EventHandler(this.cboMaNV_Leave);
             // 
             // cboCCCDNhan
             // 
@@ -208,7 +228,8 @@
             this.cboCCCDNhan.Location = new System.Drawing.Point(162, 372);
             this.cboCCCDNhan.Name = "cboCCCDNhan";
             this.cboCCCDNhan.Size = new System.Drawing.Size(121, 21);
-            this.cboCCCDNhan.TabIndex = 13;
+            this.cboCCCDNhan.TabIndex = 3;
+            this.cboCCCDNhan.Leave += new System.EventHandler(this.cboCCCDNhan_Leave);
             // 
             // cboCCCDGui
             // 
@@ -216,7 +237,8 @@
             this.cboCCCDGui.Location = new System.Drawing.Point(162, 332);
             this.cboCCCDGui.Name = "cboCCCDGui";
             this.cboCCCDGui.Size = new System.Drawing.Size(121, 21);
-            this.cboCCCDGui.TabIndex = 14;
+            this.cboCCCDGui.TabIndex = 2;
+            this.cboCCCDGui.Leave += new System.EventHandler(this.cboCCCDGui_Leave);
             // 
             // lblCanCuoc
             // 
@@ -253,7 +275,39 @@
             this.btnClose.TabIndex = 1;
             this.btnClose.Text = "Thoát";
             this.btnClose.UseVisualStyleBackColor = true;
-            this.btnClose.Click += new System.EventHandler(this.btnThem_Click);
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // errMaDonHang
+            // 
+            this.errMaDonHang.ContainerControl = this;
+            // 
+            // errKhoiLuong
+            // 
+            this.errKhoiLuong.ContainerControl = this;
+            // 
+            // errKichThuoc
+            // 
+            this.errKichThuoc.ContainerControl = this;
+            // 
+            // errCuocVanChuyen
+            // 
+            this.errCuocVanChuyen.ContainerControl = this;
+            // 
+            // errMieuTa
+            // 
+            this.errMieuTa.ContainerControl = this;
+            // 
+            // errMaNV
+            // 
+            this.errMaNV.ContainerControl = this;
+            // 
+            // errCCCDGui
+            // 
+            this.errCCCDGui.ContainerControl = this;
+            // 
+            // errCCCDNhan
+            // 
+            this.errCCCDNhan.ContainerControl = this;
             // 
             // frmTableDonHang
             // 
@@ -287,6 +341,14 @@
             this.Text = "Danh sách đơn hàng";
             ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).EndInit();
             this.grpDanhSach.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.errMaDonHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errKhoiLuong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errKichThuoc)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCuocVanChuyen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMieuTa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errMaNV)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCCCDGui)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errCCCDNhan)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,5 +379,13 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnPrint;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.ErrorProvider errMaDonHang;
+        private System.Windows.Forms.ErrorProvider errKhoiLuong;
+        private System.Windows.Forms.ErrorProvider errKichThuoc;
+        private System.Windows.Forms.ErrorProvider errCuocVanChuyen;
+        private System.Windows.Forms.ErrorProvider errMieuTa;
+        private System.Windows.Forms.ErrorProvider errMaNV;
+        private System.Windows.Forms.ErrorProvider errCCCDGui;
+        private System.Windows.Forms.ErrorProvider errCCCDNhan;
     }
 }

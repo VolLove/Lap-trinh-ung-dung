@@ -13,6 +13,14 @@ namespace DTO_App
         private string diaChi;
         private string sdt;
 
+       
+        public dto_KhachHang()
+        {
+            this.phai = "Nam";
+            this.hoVaTen = "";
+            this.diaChi = "";
+            this.sdt = "";
+        }
         public dto_KhachHang(string cCCD, string phai, string hoVaTen, string diaChi, string sdt)
         {
             this.cCCD = cCCD;

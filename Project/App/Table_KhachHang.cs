@@ -18,7 +18,7 @@ namespace App
         public frmTableKhachHang()
         {
             InitializeComponent();
-            dvgDonHang.DataSource = khachHang.selectKhachHang();
+            dvgKhachHang.DataSource = khachHang.selectKhachHang();
         }
       
     }

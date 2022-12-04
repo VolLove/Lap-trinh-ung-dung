@@ -36,9 +36,9 @@
             this.lblMaPhong = new System.Windows.Forms.Label();
             this.lblTenPhong = new System.Windows.Forms.Label();
             this.lblQuanLy = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.cboTenQL = new System.Windows.Forms.ComboBox();
+            this.txtMaPhong = new System.Windows.Forms.TextBox();
+            this.txtTenPhong = new System.Windows.Forms.TextBox();
+            this.cboMaQL = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dvgPhongBan)).BeginInit();
             this.grpPhongBan.SuspendLayout();
             this.SuspendLayout();
@@ -119,36 +119,36 @@
             this.lblQuanLy.TabIndex = 11;
             this.lblQuanLy.Text = "Quản lý";
             // 
-            // textBox1
+            // txtMaPhong
             // 
-            this.textBox1.Location = new System.Drawing.Point(588, 43);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(162, 20);
-            this.textBox1.TabIndex = 12;
+            this.txtMaPhong.Location = new System.Drawing.Point(588, 43);
+            this.txtMaPhong.Name = "txtMaPhong";
+            this.txtMaPhong.Size = new System.Drawing.Size(162, 20);
+            this.txtMaPhong.TabIndex = 12;
             // 
-            // textBox2
+            // txtTenPhong
             // 
-            this.textBox2.Location = new System.Drawing.Point(588, 83);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(162, 20);
-            this.textBox2.TabIndex = 12;
+            this.txtTenPhong.Location = new System.Drawing.Point(588, 83);
+            this.txtTenPhong.Name = "txtTenPhong";
+            this.txtTenPhong.Size = new System.Drawing.Size(162, 20);
+            this.txtTenPhong.TabIndex = 12;
             // 
-            // cboTenQL
+            // cboMaQL
             // 
-            this.cboTenQL.FormattingEnabled = true;
-            this.cboTenQL.Location = new System.Drawing.Point(588, 123);
-            this.cboTenQL.Name = "cboTenQL";
-            this.cboTenQL.Size = new System.Drawing.Size(162, 21);
-            this.cboTenQL.TabIndex = 13;
+            this.cboMaQL.FormattingEnabled = true;
+            this.cboMaQL.Location = new System.Drawing.Point(588, 123);
+            this.cboMaQL.Name = "cboMaQL";
+            this.cboMaQL.Size = new System.Drawing.Size(162, 21);
+            this.cboMaQL.TabIndex = 13;
             // 
             // frmTablePhongBan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cboTenQL);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.cboMaQL);
+            this.Controls.Add(this.txtTenPhong);
+            this.Controls.Add(this.txtMaPhong);
             this.Controls.Add(this.lblQuanLy);
             this.Controls.Add(this.lblTenPhong);
             this.Controls.Add(this.lblMaPhong);
@@ -176,8 +176,8 @@
         private System.Windows.Forms.Label lblMaPhong;
         private System.Windows.Forms.Label lblTenPhong;
         private System.Windows.Forms.Label lblQuanLy;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.ComboBox cboTenQL;
+        private System.Windows.Forms.TextBox txtMaPhong;
+        private System.Windows.Forms.TextBox txtTenPhong;
+        private System.Windows.Forms.ComboBox cboMaQL;
     }
 }

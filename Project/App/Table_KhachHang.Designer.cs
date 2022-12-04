@@ -31,7 +31,7 @@
             this.btnSua = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnThem = new System.Windows.Forms.Button();
-            this.dvgDonHang = new System.Windows.Forms.DataGridView();
+            this.dvgKhachHang = new System.Windows.Forms.DataGridView();
             this.grpKhachHang = new System.Windows.Forms.GroupBox();
             this.lblSDT = new System.Windows.Forms.Label();
             this.cbxGioiTinh = new System.Windows.Forms.ComboBox();
@@ -43,7 +43,7 @@
             this.lblGioiTinh = new System.Windows.Forms.Label();
             this.txtName = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgKhachHang)).BeginInit();
             this.grpKhachHang.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,20 +74,20 @@
             this.btnThem.Text = "Thêm";
             this.btnThem.UseVisualStyleBackColor = true;
             // 
-            // dvgDonHang
+            // dvgKhachHang
             // 
-            this.dvgDonHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dvgDonHang.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dvgDonHang.Location = new System.Drawing.Point(3, 16);
-            this.dvgDonHang.Name = "dvgDonHang";
-            this.dvgDonHang.ReadOnly = true;
-            this.dvgDonHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dvgDonHang.Size = new System.Drawing.Size(797, 178);
-            this.dvgDonHang.TabIndex = 4;
+            this.dvgKhachHang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgKhachHang.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dvgKhachHang.Location = new System.Drawing.Point(3, 16);
+            this.dvgKhachHang.Name = "dvgKhachHang";
+            this.dvgKhachHang.ReadOnly = true;
+            this.dvgKhachHang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dvgKhachHang.Size = new System.Drawing.Size(797, 178);
+            this.dvgKhachHang.TabIndex = 4;
             // 
             // grpKhachHang
             // 
-            this.grpKhachHang.Controls.Add(this.dvgDonHang);
+            this.grpKhachHang.Controls.Add(this.dvgKhachHang);
             this.grpKhachHang.Location = new System.Drawing.Point(1, 1);
             this.grpKhachHang.Name = "grpKhachHang";
             this.grpKhachHang.Size = new System.Drawing.Size(803, 197);
@@ -201,7 +201,7 @@
             this.Name = "frmTableKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Khách hàng";
-            ((System.ComponentModel.ISupportInitialize)(this.dvgDonHang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgKhachHang)).EndInit();
             this.grpKhachHang.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -213,7 +213,7 @@
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.DataGridView dvgDonHang;
+        private System.Windows.Forms.DataGridView dvgKhachHang;
         private System.Windows.Forms.GroupBox grpKhachHang;
         private System.Windows.Forms.Label lblSDT;
         private System.Windows.Forms.ComboBox cbxGioiTinh;
