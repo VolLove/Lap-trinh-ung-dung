@@ -10,10 +10,10 @@ go
 CREATE TABLE DONHANG(
 	MaDH char(10) not null PRIMARY KEY,
 	MaNV char(10) not null,
-	CCCDNhan char(12) not null,
 	CCCDGui char(12) not null,
-	DiaChiNhan nvarchar(100),
+	CCCDNhan char(12) not null,
 	DiaChiGui nvarchar(100),
+	DiaChiNhan nvarchar(100),
 	MieuTa nvarchar(200),
 	KhoiLuong float,
 	KichThuoc float,

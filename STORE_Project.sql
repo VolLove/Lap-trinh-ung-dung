@@ -42,6 +42,9 @@ select * from DONHANG;
 go
 
 
+
+
+
 --Store NHANVIEN
 create proc sp_InsertNhanVien
 (@maNV char(10),@hoVaTen nvarchar(50), @ngaySinh date, @diaChi nvarchar(50), @cccd char(12), @sdt char(10), @phai nvarchar(5),@luong float,@maPhong char(10))
@@ -143,3 +146,26 @@ as
 	select * from PHONGBAN
 go
 
+
+--khác
+create proc sp_SearchDonHangByCC
+(@CCCD char(12))
+as
+select * from DONHANG
+where @CCCD = '' or CCCDGui like '%' +@CCCD + '%';
+go
+
+create proc sp_SearchDonHangByCCnhan
+(@CCCD char(12))
+as
+select * from DONHANG
+where @CCCD = '' or CCCDNhan like '%' +@CCCD + '%';
+go
+
+create proc sp_Reprt
+as
+select DONHANG.MaDH, NHANVIEN.HoVaTen,KHACHHANG.HoVaTen,KHACHHANG.HoVaTen,DONHANG.DiaChiGui,DONHANG.DiaChiNhan,DONHANG.KhoiLuong,DONHANG.KichThuoc,DONHANG.Cuoc
+from DONHANG, NHANVIEN,KHACHHANG
+where
+DONHANG.MaNV = NHANVIEN.MaNV and KHACHHANG.CCCD = DONHANG.CCCDGui and KHACHHANG.CCCD = DONHANG.CCCDNhan
+go

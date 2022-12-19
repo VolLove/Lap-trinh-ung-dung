@@ -30,9 +30,7 @@ namespace DAL_App
                 tbPhongBan = new DataTable();
                 dataAdapter.Fill(tbPhongBan);
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();
@@ -61,9 +59,7 @@ namespace DAL_App
                     return true;
                 }
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();
@@ -93,9 +89,7 @@ namespace DAL_App
                 }
 
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();
@@ -123,9 +117,7 @@ namespace DAL_App
                 }
 
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();

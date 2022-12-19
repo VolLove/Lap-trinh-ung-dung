@@ -30,9 +30,7 @@ namespace DAL_App
                 tbKhachHang = new DataTable();
                 dataAdapter.Fill(tbKhachHang);
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();
@@ -63,9 +61,7 @@ namespace DAL_App
                 }
 
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();
@@ -95,9 +91,7 @@ namespace DAL_App
                 }
 
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();
@@ -124,14 +118,13 @@ namespace DAL_App
                 }
 
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();
             }
             return false;
         }
+     
     }
 }

@@ -30,9 +30,7 @@ namespace DAL_App
                 tbNhanVien = new DataTable();
                 dataAdapter.Fill(tbNhanVien);
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();
@@ -66,9 +64,7 @@ namespace DAL_App
                 }
 
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();
@@ -103,9 +99,7 @@ namespace DAL_App
                 }
 
             }
-            catch (Exception) { 
-            
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();
@@ -131,9 +125,7 @@ namespace DAL_App
                 }
 
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();

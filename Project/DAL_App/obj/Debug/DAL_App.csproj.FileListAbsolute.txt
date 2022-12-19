@@ -7,3 +7,16 @@ F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DAL_App\obj\Debug\DAL_A
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DAL_App\bin\Debug\DTO_App.dll
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DAL_App\bin\Debug\DTO_App.pdb
 F:\LapTrinhUngDung_C#-WINFORM\Lap-trinh-ung-dung\Project\DAL_App\obj\Debug\DAL_App.csproj.CopyComplete
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\bin\Debug\DAL_App.dll
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\bin\Debug\DAL_App.pdb
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\bin\Debug\DTO_App.dll
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\bin\Debug\DTO_App.pdb
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\obj\Debug\DAL_App.csproj.AssemblyReference.cache
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\obj\Debug\DAL_App.csproj.CoreCompileInputs.cache
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\obj\Debug\DAL_App.csproj.CopyComplete
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\obj\Debug\DAL_App.dll
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\obj\Debug\DAL_App.pdb
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\bin\Debug\SqlServerTypes\x64\msvcr120.dll
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\bin\Debug\SqlServerTypes\x64\SqlServerSpatial140.dll
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\bin\Debug\SqlServerTypes\x86\msvcr120.dll
+F:\LapTrinhUngDung_C#-WINFORM\QuanLyBuuCuc\Project\DAL_App\bin\Debug\SqlServerTypes\x86\SqlServerSpatial140.dll

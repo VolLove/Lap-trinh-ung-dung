@@ -50,8 +50,7 @@ namespace App
                 errorProvider2.Clear();
                 frmHome home = new frmHome();
                 home.ShowDialog();
-                this.Close();
-
+                Application.Exit();
             }
             else
             {

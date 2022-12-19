@@ -53,7 +53,6 @@ namespace App
         {
 
             DataTable dataTableDonHang = busDonHang.selectDonHang();
-           
             dgvDonHang.DataSource= dataTableDonHang;
 
 
@@ -71,6 +70,8 @@ namespace App
             cboMaNV.DataSource = dataTableNhanVien;
             cboMaNV.DisplayMember = "MaNV";
             cboMaNV.ValueMember = "MaNV";
+
+       
             frmClear();
         }
 
@@ -345,5 +346,6 @@ namespace App
                 ErrLoad(sender, e);
             }
         }
+
     }
 }

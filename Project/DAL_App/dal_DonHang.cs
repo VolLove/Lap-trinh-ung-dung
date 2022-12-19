@@ -12,7 +12,6 @@ namespace DAL_App
     public class dal_DonHang
     {
         SqlConnection connection = new SqlConnection(new ConnectionDB().conString);
-
         SqlDataAdapter dataAdapter = new SqlDataAdapter();
         SqlCommand cmdDonHang = new SqlCommand();
         DataTable tbDonHang = new DataTable();
@@ -33,9 +32,9 @@ namespace DAL_App
                 dataAdapter.Fill(tbDonHang);
                
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                
+                Console.WriteLine(ex.Message);
             }
             finally { 
                 connection.Close();
@@ -72,8 +71,9 @@ namespace DAL_App
                 }
 
             }
-            catch (Exception )
+            catch (Exception ex)
             {
+                Console.WriteLine(ex.Message);
             }
             finally
             {
@@ -109,9 +109,7 @@ namespace DAL_App
                     return true;
                 }
             }
-            catch (Exception) { 
-            
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();
@@ -137,16 +135,87 @@ namespace DAL_App
                     return true;
                 }
             }
-            catch (Exception)
-            {
-            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
             finally
             {
                 connection.Close();
             }
             return false;
         }
+        public DataTable sp_SearchDonHangByCC(string cCCD)
+        {
+
+            try
+            {
 
 
+                connection.Open();
+                cmdDonHang = new SqlCommand();
+                cmdDonHang.CommandText = "sp_SearchDonHangByCC";  
+                cmdDonHang.CommandType = CommandType.StoredProcedure;
+                cmdDonHang.Connection = connection;
+
+                cmdDonHang.Parameters.Add(new SqlParameter("@CCCD",cCCD));
+
+                dataAdapter = new SqlDataAdapter(cmdDonHang);
+                tbDonHang = new DataTable();
+                dataAdapter.Fill(tbDonHang);
+
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            finally
+            {
+                connection.Close();
+            }
+            return tbDonHang ;
+        }
+        public DataSet report()
+        {
+                    DataSet dataSet = new DataSet();
+            try
+            {
+                connection.Open();
+                cmdDonHang = new SqlCommand();
+                cmdDonHang.CommandText = "sp_SelectDonHang";
+                cmdDonHang.CommandType = CommandType.StoredProcedure;
+                cmdDonHang.Connection = connection;
+                dataAdapter = new SqlDataAdapter(cmdDonHang);
+        
+                dataAdapter.Fill(dataSet);
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            finally
+            {
+
+            }
+            return dataSet;
+        }
+        public DataTable sp_SearchDonHangByCCNhan(string cCCD)
+        {
+
+            try
+            {
+
+
+                connection.Open();
+                cmdDonHang = new SqlCommand();
+                cmdDonHang.CommandText = "sp_SearchDonHangByCCNhan";
+                cmdDonHang.CommandType = CommandType.StoredProcedure;
+                cmdDonHang.Connection = connection;
+
+                cmdDonHang.Parameters.Add(new SqlParameter("@CCCD", cCCD));
+
+                dataAdapter = new SqlDataAdapter(cmdDonHang);
+                tbDonHang = new DataTable();
+                dataAdapter.Fill(tbDonHang);
+
+            }
+            catch (Exception ex) { Console.WriteLine(ex.Message); }
+            finally
+            {
+                connection.Close();
+            }
+            return tbDonHang;
+        }
     }
 }

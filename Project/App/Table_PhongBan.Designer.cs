@@ -45,23 +45,36 @@
             this.errMaPhong = new System.Windows.Forms.ErrorProvider(this.components);
             this.errNamePhong = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnNewCode = new System.Windows.Forms.Button();
+            this.pROJECTDataSet = new GUI_App.PROJECTDataSet();
+            this.pHONGBANBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pHONGBANTableAdapter = new GUI_App.PROJECTDataSetTableAdapters.PHONGBANTableAdapter();
+            this.maPhongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maQLDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenPhongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPhongBan)).BeginInit();
             this.grpPhongBan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.errMaPhong)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errNamePhong)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJECTDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHONGBANBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvPhongBan
             // 
-            this.dgvPhongBan.AllowUserToDeleteRows = false;
+            this.dgvPhongBan.AllowUserToOrderColumns = true;
+            this.dgvPhongBan.AutoGenerateColumns = false;
             this.dgvPhongBan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPhongBan.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.maPhongDataGridViewTextBoxColumn,
+            this.maQLDataGridViewTextBoxColumn,
+            this.tenPhongDataGridViewTextBoxColumn});
+            this.dgvPhongBan.DataSource = this.pHONGBANBindingSource;
             this.dgvPhongBan.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvPhongBan.Location = new System.Drawing.Point(3, 16);
             this.dgvPhongBan.MultiSelect = false;
             this.dgvPhongBan.Name = "dgvPhongBan";
-            this.dgvPhongBan.ReadOnly = true;
             this.dgvPhongBan.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPhongBan.Size = new System.Drawing.Size(464, 407);
+            this.dgvPhongBan.Size = new System.Drawing.Size(343, 407);
             this.dgvPhongBan.TabIndex = 9;
             this.dgvPhongBan.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPhongBan_CellDoubleClick);
             // 
@@ -70,14 +83,14 @@
             this.grpPhongBan.Controls.Add(this.dgvPhongBan);
             this.grpPhongBan.Location = new System.Drawing.Point(12, 12);
             this.grpPhongBan.Name = "grpPhongBan";
-            this.grpPhongBan.Size = new System.Drawing.Size(470, 426);
+            this.grpPhongBan.Size = new System.Drawing.Size(349, 426);
             this.grpPhongBan.TabIndex = 1;
             this.grpPhongBan.TabStop = false;
             this.grpPhongBan.Text = "Danh sách phòng ban";
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(713, 197);
+            this.btnSua.Location = new System.Drawing.Point(637, 210);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(75, 23);
             this.btnSua.TabIndex = 10;
@@ -87,7 +100,7 @@
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(613, 197);
+            this.btnXoa.Location = new System.Drawing.Point(537, 210);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(75, 23);
             this.btnXoa.TabIndex = 9;
@@ -97,7 +110,7 @@
             // 
             // btnThem
             // 
-            this.btnThem.Location = new System.Drawing.Point(513, 197);
+            this.btnThem.Location = new System.Drawing.Point(437, 210);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(75, 23);
             this.btnThem.TabIndex = 8;
@@ -108,7 +121,7 @@
             // lblMaPhong
             // 
             this.lblMaPhong.AutoSize = true;
-            this.lblMaPhong.Location = new System.Drawing.Point(509, 43);
+            this.lblMaPhong.Location = new System.Drawing.Point(433, 56);
             this.lblMaPhong.Name = "lblMaPhong";
             this.lblMaPhong.Size = new System.Drawing.Size(55, 13);
             this.lblMaPhong.TabIndex = 11;
@@ -117,7 +130,7 @@
             // lblTenPhong
             // 
             this.lblTenPhong.AutoSize = true;
-            this.lblTenPhong.Location = new System.Drawing.Point(509, 85);
+            this.lblTenPhong.Location = new System.Drawing.Point(433, 98);
             this.lblTenPhong.Name = "lblTenPhong";
             this.lblTenPhong.Size = new System.Drawing.Size(59, 13);
             this.lblTenPhong.TabIndex = 11;
@@ -126,7 +139,7 @@
             // lblQuanLy
             // 
             this.lblQuanLy.AutoSize = true;
-            this.lblQuanLy.Location = new System.Drawing.Point(513, 127);
+            this.lblQuanLy.Location = new System.Drawing.Point(437, 140);
             this.lblQuanLy.Name = "lblQuanLy";
             this.lblQuanLy.Size = new System.Drawing.Size(43, 13);
             this.lblQuanLy.TabIndex = 11;
@@ -134,7 +147,7 @@
             // 
             // txtMaPhong
             // 
-            this.txtMaPhong.Location = new System.Drawing.Point(588, 43);
+            this.txtMaPhong.Location = new System.Drawing.Point(512, 56);
             this.txtMaPhong.Name = "txtMaPhong";
             this.txtMaPhong.Size = new System.Drawing.Size(100, 20);
             this.txtMaPhong.TabIndex = 12;
@@ -142,7 +155,7 @@
             // 
             // txtTenPhong
             // 
-            this.txtTenPhong.Location = new System.Drawing.Point(588, 83);
+            this.txtTenPhong.Location = new System.Drawing.Point(512, 96);
             this.txtTenPhong.Name = "txtTenPhong";
             this.txtTenPhong.Size = new System.Drawing.Size(162, 20);
             this.txtTenPhong.TabIndex = 12;
@@ -151,14 +164,14 @@
             // cboMaQL
             // 
             this.cboMaQL.FormattingEnabled = true;
-            this.cboMaQL.Location = new System.Drawing.Point(588, 123);
+            this.cboMaQL.Location = new System.Drawing.Point(512, 136);
             this.cboMaQL.Name = "cboMaQL";
             this.cboMaQL.Size = new System.Drawing.Size(162, 21);
             this.cboMaQL.TabIndex = 13;
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(665, 246);
+            this.btnClose.Location = new System.Drawing.Point(589, 259);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 14;
@@ -168,7 +181,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(542, 246);
+            this.btnLoad.Location = new System.Drawing.Point(466, 259);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(75, 23);
             this.btnLoad.TabIndex = 15;
@@ -186,13 +199,45 @@
             // 
             // btnNewCode
             // 
-            this.btnNewCode.Location = new System.Drawing.Point(713, 41);
+            this.btnNewCode.Location = new System.Drawing.Point(637, 54);
             this.btnNewCode.Name = "btnNewCode";
             this.btnNewCode.Size = new System.Drawing.Size(75, 23);
             this.btnNewCode.TabIndex = 10;
             this.btnNewCode.Text = "New code";
             this.btnNewCode.UseVisualStyleBackColor = true;
             this.btnNewCode.Click += new System.EventHandler(this.btnNewCode_Click);
+            // 
+            // pROJECTDataSet
+            // 
+            this.pROJECTDataSet.DataSetName = "PROJECTDataSet";
+            this.pROJECTDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pHONGBANBindingSource
+            // 
+            this.pHONGBANBindingSource.DataMember = "PHONGBAN";
+            this.pHONGBANBindingSource.DataSource = this.pROJECTDataSet;
+            // 
+            // pHONGBANTableAdapter
+            // 
+            this.pHONGBANTableAdapter.ClearBeforeFill = true;
+            // 
+            // maPhongDataGridViewTextBoxColumn
+            // 
+            this.maPhongDataGridViewTextBoxColumn.DataPropertyName = "MaPhong";
+            this.maPhongDataGridViewTextBoxColumn.HeaderText = "MaPhong";
+            this.maPhongDataGridViewTextBoxColumn.Name = "maPhongDataGridViewTextBoxColumn";
+            // 
+            // maQLDataGridViewTextBoxColumn
+            // 
+            this.maQLDataGridViewTextBoxColumn.DataPropertyName = "MaQL";
+            this.maQLDataGridViewTextBoxColumn.HeaderText = "MaQL";
+            this.maQLDataGridViewTextBoxColumn.Name = "maQLDataGridViewTextBoxColumn";
+            // 
+            // tenPhongDataGridViewTextBoxColumn
+            // 
+            this.tenPhongDataGridViewTextBoxColumn.DataPropertyName = "TenPhong";
+            this.tenPhongDataGridViewTextBoxColumn.HeaderText = "TenPhong";
+            this.tenPhongDataGridViewTextBoxColumn.Name = "tenPhongDataGridViewTextBoxColumn";
             // 
             // frmTablePhongBan
             // 
@@ -219,6 +264,8 @@
             this.grpPhongBan.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.errMaPhong)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errNamePhong)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pROJECTDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pHONGBANBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,5 +289,11 @@
         private System.Windows.Forms.ErrorProvider errMaPhong;
         private System.Windows.Forms.Button btnNewCode;
         private System.Windows.Forms.ErrorProvider errNamePhong;
+        private PROJECTDataSet pROJECTDataSet;
+        private System.Windows.Forms.BindingSource pHONGBANBindingSource;
+        private PROJECTDataSetTableAdapters.PHONGBANTableAdapter pHONGBANTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maPhongDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maQLDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn tenPhongDataGridViewTextBoxColumn;
     }
 }

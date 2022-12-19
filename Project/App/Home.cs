@@ -25,7 +25,7 @@ namespace App
             this.Hide();
             frmLogin login = new frmLogin();
             login.ShowDialog();
-            this.Close();
+            Application.Exit();
 
         }
         private void mnuKhachHang_Click(object sender, EventArgs e)
@@ -63,6 +63,19 @@ namespace App
         {
             frmTableDonHang  tableDonHang = new frmTableDonHang();
             tableDonHang.ShowDialog(); 
+        }
+
+
+        private void mnuTimKiem_Click(object sender, EventArgs e)
+        {
+            frmSearchDonHang searchDonHang = new frmSearchDonHang();
+            searchDonHang.ShowDialog();
+        }
+
+        private void mnuBaoCao_Click(object sender, EventArgs e)
+        {
+            frmViewReport reportDonHang = new frmViewReport();
+            reportDonHang.ShowDialog();
         }
     }
 }

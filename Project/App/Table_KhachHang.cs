@@ -222,10 +222,6 @@ namespace App
             }
         }
 
-       
-
-    
-
         private void dgvKhachHang_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0)

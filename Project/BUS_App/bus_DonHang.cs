@@ -27,5 +27,18 @@ namespace BUS_App
         {
             return daldonHang.deleteDonHang(maDonHang);
         }
+        public DataTable sp_SearchDonHangByCC(string cCCD)
+        {
+            return daldonHang.sp_SearchDonHangByCC(cCCD);
+        }
+        public DataTable sp_SearchDonHangByCCNhan(string cCCD)
+        {
+            return daldonHang.sp_SearchDonHangByCCNhan(cCCD);
+        }
+        public DataSet report()
+        {
+            return daldonHang.report();
+        }
+
     }
 }
